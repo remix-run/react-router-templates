@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241112.0",
-    "@hiogawa/vite-node-miniflare": "0.1.1",
     "@react-router/dev": "*",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
