@@ -1,0 +1,12 @@
+.env
+!.env.example
+.dev.vars
+.DS_Store
+.react-router
+build
+node_modules
+*.tsbuildinfo
+
+# Cloudflare specific
+.mf
+.wrangler
