@@ -18,8 +18,8 @@
     "isbot": "^5.1.17",
     "morgan": "^1.10.0",
     "postgres": "^3.4.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router": "*"
   },
   "devDependencies": {
@@ -30,8 +30,8 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^20",
     "@types/pg": "^8.11.10",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",
     "dotenv-cli": "^7.4.3",
     "drizzle-kit": "~0.28.1",

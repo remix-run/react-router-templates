@@ -14,8 +14,8 @@
     "express": "^4.21.1",
     "morgan": "^1.10.0",
     "isbot": "^5.1.17",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router": "*"
   },
   "devDependencies": {
@@ -25,8 +25,8 @@
     "@types/express-serve-static-core": "^5.0.1",
     "@types/morgan": "^1.9.9",
     "@types/node": "^20",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "postcss": "^8.4.49",
