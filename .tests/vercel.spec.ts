@@ -1,28 +1,26 @@
-import { test, expect } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 
-import { startCustom } from "./utils.js";
+import { matchLine, testTemplate, urlRegex } from "./utils";
 
-let vite: Awaited<ReturnType<typeof startCustom>>;
-test.beforeAll(async () => {
-  vite = await startCustom("vercel");
-});
-test.afterAll(async () => {
-  await vite?.cleanup();
+const test = testTemplate("vercel");
+
+test("typecheck", async ({ $ }) => {
+  await $(`pnpm typecheck`);
 });
 
-test("loads home page", async ({ page }) => {
-  await page.goto(new URL("/", vite.baseURL).href);
+test("dev", async ({ page, port, $ }) => {
+  const dev = $(`pnpm dev`, { env: { PORT: String(port) } });
+  const url = await matchLine(dev.stdout, urlRegex.custom);
+  await workflow({ page, url });
+});
 
+test("build", async ({ $ }) => {
+  await $(`pnpm build`);
+});
+
+async function workflow({ page, url }: { page: Page; url: string }) {
+  await page.goto(url);
   await expect(page).toHaveTitle(/New React Router App/);
-
-  await page
-    .getByRole("link", {
-      name: "React Router Docs",
-    })
-    .waitFor();
-  await page
-    .getByRole("link", {
-      name: "Join Discord",
-    })
-    .waitFor();
-});
+  await page.getByRole("link", { name: "React Router Docs" }).waitFor();
+  await page.getByRole("link", { name: "Join Discord" }).waitFor();
+}

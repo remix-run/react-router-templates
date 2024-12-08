@@ -1,41 +1,32 @@
-import { execFile } from "node:child_process";
-import * as path from "node:path";
+import { expect, Page } from "@playwright/test";
+import { matchLine, testTemplate, urlRegex } from "./utils.js";
 
-import { test, expect } from "@playwright/test";
+const test = testTemplate("cloudflare-d1");
 
-import { startVite } from "./utils.js";
-
-let vite: Awaited<ReturnType<typeof startVite>>;
-test.beforeAll(async () => {
-  const cp = execFile("pnpm", ["db:migrate"], {
-    cwd: path.resolve(process.cwd(), "cloudflare-d1"),
-  });
-  await new Promise((resolve) => cp.on("exit", resolve));
-  if (cp.exitCode !== 0) {
-    throw new Error("Failed to run db:migrate");
-  }
-
-  vite = await startVite("cloudflare-d1");
-});
-test.afterAll(async () => {
-  await vite?.cleanup();
+test("typecheck", async ({ $ }) => {
+  await $(`pnpm typecheck`);
 });
 
-test("loads home page", async ({ page }) => {
-  await page.goto(new URL("/", vite.baseURL).href);
+test("dev", async ({ page, port, $ }) => {
+  await $(`pnpm db:migrate`);
+  const dev = $(`pnpm dev --port ${port}`);
+  const url = await matchLine(dev.stdout, urlRegex.viteDev);
+  await workflow({ page, url });
+});
 
+test("build + start", async ({ page, port, $ }) => {
+  await $(`pnpm build`);
+  const start = $(`pnpm start`, { env: { PORT: String(port) } });
+  const url = await matchLine(start.stdout, urlRegex.wrangler);
+  await workflow({ page, url });
+});
+
+async function workflow({ page, url }: { page: Page; url: string }) {
+  await page.goto(url);
   await expect(page).toHaveTitle(/New React Router App/);
 
-  await page
-    .getByRole("link", {
-      name: "React Router Docs",
-    })
-    .waitFor();
-  await page
-    .getByRole("link", {
-      name: "Join Discord",
-    })
-    .waitFor();
+  await page.getByRole("link", { name: "React Router Docs" }).waitFor();
+  await page.getByRole("link", { name: "Join Discord" }).waitFor();
 
   const randomText = Math.random().toString(36).substring(7);
   await page.getByRole("textbox", { name: "Name" }).fill(randomText);
@@ -45,6 +36,6 @@ test("loads home page", async ({ page }) => {
   await page.getByRole("button", { name: "Sign Guest Book" }).click();
   await page.getByText(randomText).waitFor();
 
-  await page.goto(new URL("/", vite.baseURL).href);
+  await page.goto(url);
   await page.getByText(randomText).waitFor();
-});
+}
