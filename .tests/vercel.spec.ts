@@ -1,6 +1,7 @@
 import { expect, Page } from "@playwright/test";
 
 import { matchLine, testTemplate, urlRegex } from "./utils";
+import getPort from "get-port";
 
 const test = testTemplate("vercel");
 
@@ -8,7 +9,8 @@ test("typecheck", async ({ $ }) => {
   await $(`pnpm typecheck`);
 });
 
-test("dev", async ({ page, port, $ }) => {
+test("dev", async ({ page, $ }) => {
+  const port = await getPort();
   const dev = $(`pnpm dev`, { env: { PORT: String(port) } });
   const url = await matchLine(dev.stdout, urlRegex.custom);
   await workflow({ page, url });

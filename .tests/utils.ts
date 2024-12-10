@@ -10,7 +10,6 @@ import {
   ResultPromise,
 } from "execa";
 import fs from "fs-extra";
-import getPort from "get-port";
 import * as Path from "pathe";
 import { Readable } from "stream";
 import { ChildProcess } from "child_process";
@@ -40,7 +39,6 @@ export const testTemplate = (template: string) =>
   playwrightTest.extend<{
     cwd: string;
     edit: Edit;
-    port: number;
     $: Command;
   }>({
     page: async ({ page }, use) => {
@@ -77,10 +75,6 @@ export const testTemplate = (template: string) =>
         return fs.writeFileSync(filepath, transform(contents), "utf8");
       });
     },
-    port: async ({}, use) => {
-      const port = await getPort();
-      await use(port);
-    },
     $: async ({ cwd }, use) => {
       const spawn = execa({
         cwd,
@@ -108,7 +102,6 @@ export const testTemplate = (template: string) =>
         return p;
       });
       testHasEnded = true;
-
       processes.forEach((p) => p.kill());
     },
   });

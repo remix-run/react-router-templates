@@ -1,4 +1,5 @@
 import { expect, Page } from "@playwright/test";
+import getPort from "get-port";
 
 import { matchLine, testTemplate, urlRegex } from "./utils";
 
@@ -8,14 +9,17 @@ test("typecheck", async ({ $ }) => {
   await $(`pnpm typecheck`);
 });
 
-test("dev", async ({ page, port, $ }) => {
+test("dev", async ({ page, $ }) => {
+  const port = await getPort();
   const dev = $(`pnpm dev --port ${port}`);
   const url = await matchLine(dev.stdout, urlRegex.viteDev);
   await workflow({ page, url });
 });
 
-test("build + start", async ({ page, port, $ }) => {
+test("build + start", async ({ page, $ }) => {
   await $(`pnpm build`);
+
+  const port = await getPort();
   const start = $(`pnpm start`, { env: { PORT: String(port) } });
   const url = await matchLine(start.stdout, urlRegex.reactRouterServe);
   await workflow({ page, url });
