@@ -10,8 +10,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@react-router/express": "*",
-    "@react-router/node": "*",
+    "@react-router/express": "^7",
+    "@react-router/node": "^7",
     "compression": "^1.7.5",
     "drizzle-orm": "~0.36.3",
     "express": "^4.21.1",
@@ -20,10 +20,10 @@
     "postgres": "^3.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "*"
+    "react-router": "^7"
   },
   "devDependencies": {
-    "@react-router/dev": "*",
+    "@react-router/dev": "^7",
     "@types/compression": "^1.7.5",
     "@types/express": "^5.0.0",
     "@types/express-serve-static-core": "^5.0.1",
