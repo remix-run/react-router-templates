@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "@netlify/functions": "2.8.2",
-    "@react-router/node": "*",
+    "@react-router/node": "^7",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "*"
+    "react-router": "^7"
   },
   "devDependencies": {
     "@mjackson/node-fetch-server": "0.3.0",
-    "@react-router/dev": "*",
+    "@react-router/dev": "^7",
     "@types/express": "^5.0.0",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
