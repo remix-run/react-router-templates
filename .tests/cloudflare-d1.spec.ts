@@ -15,6 +15,7 @@ test("dev", async ({ page, port, $ }) => {
 });
 
 test("build + start", async ({ page, port, $ }) => {
+  await $(`pnpm db:migrate`);
   await $(`pnpm build`);
   const start = $(`pnpm start --port ${port}`);
   const url = await matchLine(start.stdout, urlRegex.wrangler);
