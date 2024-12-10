@@ -3,8 +3,8 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "dev": "cross-env NODE_ENV=development node server.js",
-    "start": "node server.js",
+    "dev": "cross-env NODE_ENV=development node server.mjs",
+    "start": "node server.mjs",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
