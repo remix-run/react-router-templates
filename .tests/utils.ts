@@ -110,7 +110,6 @@ export const testTemplate = (template: string) =>
       testHasEnded = true;
 
       processes.forEach((p) => p.kill());
-      await Promise.all(processes);
     },
   });
 
