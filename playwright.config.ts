@@ -13,7 +13,24 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: devices["Desktop Chrome"],
+    },
+    {
+      name: "webkit",
+      use: devices["Desktop Safari"],
+    },
+    {
+      name: "msedge",
+      use: {
+        ...devices["Desktop Edge"],
+        // Desktop Edge uses chromium by default
+        // https://github.com/microsoft/playwright/blob/993546c1bc3267fb72eddaf8cf003cb2e1519598/packages/playwright-core/src/server/deviceDescriptorsSource.json#L1652
+        channel: "msedge",
+      },
+    },
+    {
+      name: "firefox",
+      use: devices["Desktop Firefox"],
     },
   ],
 });
