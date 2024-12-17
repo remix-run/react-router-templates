@@ -260,15 +260,6 @@ importers:
 
   netlify:
     dependencies:
-      '@netlify/functions':
-        specifier: 2.8.2
-        version: 2.8.2
-      '@react-router/node':
-        specifier: '*'
-        version: 7.0.0(react-router@7.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.2)
-      isbot:
-        specifier: ^5.1.17
-        version: 5.1.17
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -279,15 +270,12 @@ importers:
         specifier: '*'
         version: 7.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
-      '@mjackson/node-fetch-server':
-        specifier: 0.3.0
-        version: 0.3.0
+      '@netlify/vite-plugin-react-router':
+        specifier: ^1.0.0
+        version: 1.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.1))
       '@react-router/dev':
         specifier: '*'
         version: 7.0.0(@react-router/serve@7.0.0(react-router@7.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.2))(@types/node@22.9.1)(react-router@7.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.1))(wrangler@3.88.0(@cloudflare/workers-types@4.20241112.0))
-      '@types/express':
-        specifier: ^5.0.0
-        version: 5.0.0
       '@types/react':
         specifier: ^19.0.1
         version: 19.0.1
@@ -297,15 +285,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
-      express:
-        specifier: ^4.21.1
-        version: 4.21.1
       netlify-cli:
         specifier: ^17.38.0
-        version: 17.38.0(@types/express@5.0.0)(@types/node@22.9.1)
+        version: 17.38.0(@types/node@22.9.1)
       postcss:
         specifier: ^8.4.49
         version: 8.4.49
@@ -1880,9 +1862,6 @@ packages:
   '@mjackson/node-fetch-server@0.2.0':
     resolution: {integrity: sha512-EMlH1e30yzmTpGLQjlFmaDAjyOeZhng1/XCd7DExR8PNAnG/G1tyruZxEoUe11ClnwGhGrtsdnyyUx1frSzjng==}
 
-  '@mjackson/node-fetch-server@0.3.0':
-    resolution: {integrity: sha512-p+wzVVjYI6pi+t9hRMZngfwywE4CaPu3ZuYkB3+fkS1bSPAxZikXeIdeuOTiy5oqltOOODG0hoe55FR2PRmF/A==}
-
   '@netlify/binary-info@1.0.0':
     resolution: {integrity: sha512-4wMPu9iN3/HL97QblBsBay3E1etIciR84izI3U+4iALY+JHCrI+a2jO0qbAZ/nxKoegypYEaiiqWXylm+/zfrw==}
 
@@ -1933,10 +1912,6 @@ packages:
   '@netlify/functions-utils@5.2.93':
     resolution: {integrity: sha512-/b2JtJuB3KNN5AIfiH/tan/uM4i6nLj2QFGUL9oID58cMsd73iouRacKu4ct+gxUU78y+/6fiOeYRXbcthdltA==}
     engines: {node: ^14.16.0 || >=16.0.0}
-
-  '@netlify/functions@2.8.2':
-    resolution: {integrity: sha512-DeoAQh8LuNPvBE4qsKlezjKj0PyXDryOFJfJKo3Z1qZLKzQ21sT314KQKPVjfvw6knqijj+IO+0kHXy/TJiqNA==}
-    engines: {node: '>=14.0.0'}
 
   '@netlify/git-utils@5.1.1':
     resolution: {integrity: sha512-oyHieuTZH3rKTmg7EKpGEGa28IFxta2oXuVwpPJI/FJAtBje3UE+yko0eDjNufgm3AyGa8G77trUxgBhInAYuw==}
@@ -2039,13 +2014,15 @@ packages:
     resolution: {integrity: sha512-V2B8ZB19heVKa715uOeDkztxLH7uaqZ+9U5fV7BRzbQ2514DO5Vxj9hG0irzuRLfZXZZjp/chPUesv4VVsce/A==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
-  '@netlify/serverless-functions-api@1.26.1':
-    resolution: {integrity: sha512-q3L9i3HoNfz0SGpTIS4zTcKBbRkxzCRpd169eyiTuk3IwcPC3/85mzLHranlKo2b+HYT0gu37YxGB45aD8A3Tw==}
-    engines: {node: '>=18.0.0'}
-
   '@netlify/serverless-functions-api@1.31.0':
     resolution: {integrity: sha512-/ux3fefmw0yGmzRMOqhGrzbAuALtW8HY08bjE4yCk+y8CzB9r9mPd1ApSJe3KlYD+sqDvbQGrEXdifQ/LzUIDQ==}
     engines: {node: '>=18.0.0'}
+
+  '@netlify/vite-plugin-react-router@1.0.0':
+    resolution: {integrity: sha512-J9xzn2Gdehg3LSEXFrpXLjQm2T2HQEnnlbTH7Ic9mjaz9rwkRmgwbYBn9h5SexQ0mV82jZjhvneblL8VPKiUtQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      vite: '>=5.0.0'
 
   '@netlify/zip-it-and-ship-it@9.41.1':
     resolution: {integrity: sha512-EzXw1+4OJ4mCZUOqVPDQZNM8jf/563utFo1Ph6dYtSR21E1oYlgt6Oib1pyG/bFGufvdtrxw845/1MTCPvXzJA==}
@@ -2275,6 +2252,16 @@ packages:
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react-router: 7.0.0
+      typescript: ^5.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@react-router/node@7.0.2':
+    resolution: {integrity: sha512-6Of5M2wP9QgYlR+boR0ptPjh3UyfaNvPMKQihowTGjAjUZIoNqz4iBn8ClNsLFbT3KQewcnNTHi2p+Ou7S4ZyQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react-router: 7.0.2
       typescript: ^5.1.0
     peerDependenciesMeta:
       typescript:
@@ -5831,6 +5818,16 @@ packages:
       react-dom:
         optional: true
 
+  react-router@7.0.2:
+    resolution: {integrity: sha512-m5AcPfTRUcjwmhBzOJGEl6Y7+Crqyju0+TgTQxoS4SO+BkWbhOrcfZNq6wSWdl2BBbJbsAoBUb8ZacOFT+/JlA==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
     engines: {node: '>=0.10.0'}
@@ -7858,8 +7855,6 @@ snapshots:
 
   '@mjackson/node-fetch-server@0.2.0': {}
 
-  '@mjackson/node-fetch-server@0.3.0': {}
-
   '@netlify/binary-info@1.0.0': {}
 
   '@netlify/blobs@7.4.0': {}
@@ -8037,10 +8032,6 @@ snapshots:
       - encoding
       - supports-color
 
-  '@netlify/functions@2.8.2':
-    dependencies:
-      '@netlify/serverless-functions-api': 1.26.1
-
   '@netlify/git-utils@5.1.1':
     dependencies:
       execa: 6.1.0
@@ -8114,15 +8105,21 @@ snapshots:
     dependencies:
       execa: 6.1.0
 
-  '@netlify/serverless-functions-api@1.26.1':
-    dependencies:
-      '@netlify/node-cookies': 0.1.0
-      urlpattern-polyfill: 8.0.2
-
   '@netlify/serverless-functions-api@1.31.0':
     dependencies:
       '@netlify/node-cookies': 0.1.0
       urlpattern-polyfill: 8.0.2
+
+  '@netlify/vite-plugin-react-router@1.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.1))':
+    dependencies:
+      '@react-router/node': 7.0.2(react-router@7.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.2)
+      isbot: 5.1.17
+      react-router: 7.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      vite: 5.4.11(@types/node@22.9.1)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+      - typescript
 
   '@netlify/zip-it-and-ship-it@9.41.1(supports-color@9.4.0)':
     dependencies:
@@ -8466,6 +8463,16 @@ snapshots:
     dependencies:
       '@mjackson/node-fetch-server': 0.2.0
       react-router: 7.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      source-map-support: 0.5.21
+      stream-slice: 0.1.2
+      undici: 6.21.0
+    optionalDependencies:
+      typescript: 5.7.2
+
+  '@react-router/node@7.0.2(react-router@7.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.2)':
+    dependencies:
+      '@mjackson/node-fetch-server': 0.2.0
+      react-router: 7.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       source-map-support: 0.5.21
       stream-slice: 0.1.2
       undici: 6.21.0
@@ -10785,15 +10792,13 @@ snapshots:
       statuses: 2.0.1
       toidentifier: 1.0.1
 
-  http-proxy-middleware@2.0.7(@types/express@5.0.0)(debug@4.3.7):
+  http-proxy-middleware@2.0.7(debug@4.3.7):
     dependencies:
       '@types/http-proxy': 1.17.15
       http-proxy: 1.18.1(debug@4.3.7)
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
       micromatch: 4.0.8
-    optionalDependencies:
-      '@types/express': 5.0.0
     transitivePeerDependencies:
       - debug
 
@@ -11472,7 +11477,7 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@17.38.0(@types/express@5.0.0)(@types/node@22.9.1):
+  netlify-cli@17.38.0(@types/node@22.9.1):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
@@ -11529,7 +11534,7 @@ snapshots:
       hasbin: 1.2.3
       hasha: 5.2.2
       http-proxy: 1.18.1(debug@4.3.7)
-      http-proxy-middleware: 2.0.7(@types/express@5.0.0)(debug@4.3.7)
+      http-proxy-middleware: 2.0.7(debug@4.3.7)
       https-proxy-agent: 7.0.5
       inquirer: 6.5.2
       inquirer-autocomplete-prompt: 1.4.0(inquirer@6.5.2)
@@ -12281,6 +12286,16 @@ snapshots:
   react-refresh@0.14.2: {}
 
   react-router@7.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      '@types/cookie': 0.6.0
+      cookie: 1.0.1
+      react: 19.0.0
+      set-cookie-parser: 2.7.1
+      turbo-stream: 2.4.0
+    optionalDependencies:
+      react-dom: 19.0.0(react@19.0.0)
+
+  react-router@7.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@types/cookie': 0.6.0
       cookie: 1.0.1
