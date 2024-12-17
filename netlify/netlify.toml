@@ -1,10 +1,9 @@
 [build]
-command = "npm run build"
+command = "react-router build"
 publish = "build/client"
 
 [dev]
-command = "npm run dev"
-framework = "vite"
+command = "react-router dev"
 
 # Set immutable caching for static files, because they have fingerprinted filenames
 
