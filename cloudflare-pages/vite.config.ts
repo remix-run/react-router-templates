@@ -1,3 +1,4 @@
+import { cloudflareDevProxy } from "@react-router/dev/vite/cloudflare";
 import { reactRouter } from "@react-router/dev/vite";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
@@ -27,5 +28,5 @@ export default defineConfig({
       ],
     },
   },
-  plugins: [reactRouter(), tsconfigPaths()],
+  plugins: [cloudflareDevProxy(), reactRouter(), tsconfigPaths()],
 });
