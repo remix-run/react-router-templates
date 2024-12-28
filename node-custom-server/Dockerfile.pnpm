@@ -19,7 +19,7 @@ WORKDIR /app
 RUN pnpm build
 
 FROM dependencies-env
-COPY ./package.json pnpm-lock.yaml server.js /app/
+COPY ./package.json pnpm-lock.yaml server.prod.js /app/
 COPY --from=production-dependencies-env /app/node_modules /app/node_modules
 COPY --from=build-env /app/build /app/build
 WORKDIR /app
