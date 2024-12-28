@@ -3,8 +3,6 @@ import { ServerRouter } from "react-router";
 import { isbot } from "isbot";
 import { renderToReadableStream } from "react-dom/server";
 
-const ABORT_DELAY = 5_000;
-
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
@@ -19,7 +17,6 @@ export default async function handleRequest(
     <ServerRouter
       context={routerContext}
       url={request.url}
-      abortDelay={ABORT_DELAY}
     />,
     {
       onError(error: unknown) {
