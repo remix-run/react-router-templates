@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "deploy": "npm run build && wrangler deploy",
     "dev": "react-router dev",
     "start": "wrangler dev",
     "typecheck": "react-router typegen && tsc -b"
