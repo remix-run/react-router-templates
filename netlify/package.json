@@ -2,28 +2,23 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build && node netlify/prepare.js",
-    "dev": "cross-env NODE_ENV=development node ./dev-server.js",
+    "build": "react-router build",
+    "dev": "react-router dev",
     "start": "netlify serve",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@netlify/functions": "2.8.2",
     "@react-router/node": "*",
-    "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "*"
   },
   "devDependencies": {
-    "@mjackson/node-fetch-server": "0.3.0",
+    "@netlify/vite-plugin-react-router": "^1.0.0",
     "@react-router/dev": "*",
-    "@types/express": "^5.0.0",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "autoprefixer": "^10.4.20",
-    "cross-env": "^7.0.3",
-    "express": "^4.21.1",
     "netlify-cli": "^17.38.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
