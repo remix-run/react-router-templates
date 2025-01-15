@@ -1,4 +1,3 @@
-import "../worker-configuration"
 import { createRequestHandler } from "react-router";
 
 declare global {
@@ -22,6 +21,7 @@ const requestHandler = createRequestHandler(
 
 export default {
   fetch(request, env, ctx) {
+    console.log("yo");
     return requestHandler(request, {
       cloudflare: { env, ctx },
     });

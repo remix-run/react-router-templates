@@ -1,5 +1,5 @@
 import { reactRouter } from "@react-router/dev/vite";
-import { cloudflareDevProxy } from '@react-router/dev/vite/cloudflare'
+import { cloudflareDevProxy } from "@react-router/dev/vite/cloudflare";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
