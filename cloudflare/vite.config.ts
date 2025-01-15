@@ -18,23 +18,6 @@ export default defineConfig(({ isSsrBuild }) => ({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  ssr: {
-    target: "webworker",
-    noExternal: true,
-    resolve: {
-      conditions: ["workerd", "browser"],
-    },
-    optimizeDeps: {
-      include: [
-        "react",
-        "react/jsx-runtime",
-        "react/jsx-dev-runtime",
-        "react-dom",
-        "react-dom/server",
-        "react-router",
-      ],
-    },
-  },
   plugins: [
     cloudflareDevProxy({
       getLoadContext({ context }) {
