@@ -1,9 +1,10 @@
-import { vitePluginViteNodeMiniflare } from "@hiogawa/vite-node-miniflare";
 import { reactRouter } from "@react-router/dev/vite";
+import { cloudflareDevProxy } from "@react-router/dev/vite/cloudflare";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { getLoadContext } from "./load-context";
 
 export default defineConfig(({ isSsrBuild }) => ({
   build: {
@@ -21,7 +22,6 @@ export default defineConfig(({ isSsrBuild }) => ({
   ssr: {
     target: "webworker",
     noExternal: true,
-    external: ["node:async_hooks"],
     resolve: {
       conditions: ["workerd", "browser"],
     },
@@ -37,14 +37,12 @@ export default defineConfig(({ isSsrBuild }) => ({
     },
   },
   plugins: [
-    vitePluginViteNodeMiniflare({
-      entry: "./workers/app.ts",
-      miniflareOptions: (options) => {
-        options.compatibilityDate = "2024-11-18";
-        options.compatibilityFlags = ["nodejs_compat"];
-        options.d1Databases = { DB: "your-database-id" };
-        // match where wrangler applies migrations to
-        options.d1Persist = ".wrangler/state/v3/d1";
+    cloudflareDevProxy({
+      getLoadContext({ context }) {
+        return getLoadContext(
+          // @ts-expect-error - context types are unaware of the proxied values
+          context.cloudflare
+        );
       },
     }),
     reactRouter(),

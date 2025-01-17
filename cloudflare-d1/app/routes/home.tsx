@@ -1,4 +1,3 @@
-import { database } from "~/database/context";
 import * as schema from "~/database/schema";
 
 import type { Route } from "./+types/home";
@@ -11,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export async function action({ request }: Route.ActionArgs) {
+export async function action({ request, context }: Route.ActionArgs) {
   const formData = await request.formData();
   let name = formData.get("name");
   let email = formData.get("email");
@@ -25,18 +24,15 @@ export async function action({ request }: Route.ActionArgs) {
     return { guestBookError: "Name and email are required" };
   }
 
-  const db = database();
   try {
-    await db.insert(schema.guestBook).values({ name, email });
+    await context.db.insert(schema.guestBook).values({ name, email });
   } catch (error) {
     return { guestBookError: "Error adding to guest book" };
   }
 }
 
 export async function loader({ context }: Route.LoaderArgs) {
-  const db = database();
-
-  const guestBook = await db.query.guestBook.findMany({
+  const guestBook = await context.db.query.guestBook.findMany({
     columns: {
       id: true,
       name: true,
@@ -45,7 +41,7 @@ export async function loader({ context }: Route.LoaderArgs) {
 
   return {
     guestBook,
-    message: context.VALUE_FROM_CLOUDFLARE,
+    message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE,
   };
 }
 
