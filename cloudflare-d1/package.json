@@ -8,6 +8,7 @@
     "db:migrate-production": "dotenv -- drizzle-kit migrate",
     "dev": "react-router dev",
     "start": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
     "typecheck": "react-router typegen && tsc -b"
   },
   "dependencies": {

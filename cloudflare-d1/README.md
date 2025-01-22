@@ -50,10 +50,24 @@ npm run build
 
 Deployment is done using the Wrangler CLI.
 
-To deploy directly to production:
+First, you need to create a d1 database in Cloudflare.
 
 ```sh
-npx wrangler deploy
+npx wrangler d1 create <name-of-your-database>
+```
+
+Be sure to update the `wrangler.toml` file with the correct database name and id.
+
+You will also need to [update the `drizzle.config.ts` file](https://orm.drizzle.team/docs/guides/d1-http-with-drizzle-kit), and then run the production migration:
+
+```sh
+npm run db:migrate-production
+```
+
+To build and deploy directly to production:
+
+```sh
+npm run deploy
 ```
 
 To deploy a preview URL:

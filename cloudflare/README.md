@@ -44,10 +44,10 @@ npm run build
 
 Deployment is done using the Wrangler CLI.
 
-To deploy directly to production:
+To build and deploy directly to production:
 
 ```sh
-npx wrangler deploy
+npm run deploy
 ```
 
 To deploy a preview URL:
