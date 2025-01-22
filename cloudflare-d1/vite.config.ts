@@ -38,12 +38,7 @@ export default defineConfig(({ isSsrBuild }) => ({
   },
   plugins: [
     cloudflareDevProxy({
-      getLoadContext({ context }) {
-        return getLoadContext(
-          // @ts-expect-error - context types are unaware of the proxied values
-          context.cloudflare
-        );
-      },
+      getLoadContext,
     }),
     reactRouter(),
     tsconfigPaths(),

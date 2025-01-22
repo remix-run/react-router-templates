@@ -11,17 +11,22 @@ declare module "react-router" {
   export interface AppLoadContext {
     cloudflare: {
       env: CloudflareEnvironment;
-      ctx: ExecutionContext;
+      ctx: Omit<ExecutionContext, "props">;
     };
     db: DrizzleD1Database<typeof schema>;
   }
 }
 
-export function getLoadContext(cloudflare: AppLoadContext["cloudflare"]) {
-  const db = drizzle(cloudflare.env.DB, { schema });
+type GetLoadContextArgs = {
+  request: Request;
+  context: Pick<AppLoadContext, "cloudflare">;
+};
+
+export function getLoadContext({ context }: GetLoadContextArgs) {
+  const db = drizzle(context.cloudflare.env.DB, { schema });
 
   return {
-    cloudflare,
+    cloudflare: context.cloudflare,
     db,
   };
 }
