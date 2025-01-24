@@ -4,5 +4,8 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [reactRouter(), tsconfigPaths(), tailwindcss()],
-});
+  plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  build: {
+    cssMinify: true,
+    ssr: false,
+}});

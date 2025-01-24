@@ -18,8 +18,8 @@ export default defineConfig(({ isSsrBuild }) => ({
         return { cloudflare: context.cloudflare };
       },
     }),
+    tailwindcss(),
     reactRouter(),
     tsconfigPaths(),
-    tailwindcss(),
   ],
 }));

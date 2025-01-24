@@ -11,5 +11,5 @@ export default defineConfig(({ isSsrBuild }) => ({
         }
       : undefined,
   },
-  plugins: [reactRouter(), tsconfigPaths(), tailwindcss()],
+  plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 }));

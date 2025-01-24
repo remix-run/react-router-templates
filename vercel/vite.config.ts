@@ -14,5 +14,5 @@ export default defineConfig(({ isSsrBuild, command }) => ({
   ssr: {
     noExternal: command === "build" ? true : undefined,
   },
-  plugins: [reactRouter(), tsconfigPaths(), tailwindcss()],
+  plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 }));

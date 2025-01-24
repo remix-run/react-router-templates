@@ -34,8 +34,8 @@ export default defineConfig(({ isSsrBuild }) => ({
     cloudflareDevProxy({
       getLoadContext,
     }),
+    tailwindcss(),
     reactRouter(),
     tsconfigPaths(),
-    tailwindcss(),
   ],
 }));
