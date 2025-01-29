@@ -7,6 +7,8 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import "./app.css";
+
 import type { Route } from "./+types/root";
 
 export function Layout({ children }: { children: React.ReactNode }) {

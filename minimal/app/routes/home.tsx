@@ -5,5 +5,9 @@ export function loader() {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <h1>Hello {loaderData.name}</h1>;
+  return (
+    <div className="text-center p-4">
+      <h1 className="text-2xl">Hello, {loaderData.name}</h1>
+    </div>
+  );
 }
