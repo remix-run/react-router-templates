@@ -4,6 +4,7 @@ packages:
   - "cloudflare-d1"
   - "default"
   - "javascript"
+  - "minimal"
   - "netlify"
   - "node-custom-server"
   - "node-postgres"
