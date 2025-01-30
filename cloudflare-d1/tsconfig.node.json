@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "tailwind.config.ts",
     "vite.config.ts",
     "database/**/*",
     "load-context.ts",
