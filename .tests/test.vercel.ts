@@ -18,7 +18,7 @@ test("dev", async ({ page, $ }) => {
   const port = await getPort();
   const dev = $(`pnpm dev`, { env: { PORT: String(port) } });
 
-  const url = await matchLine(dev.stdout, urlRegex.custom);
+  const url = await matchLine(dev.stdout, urlRegex.viteDev);
   await workflow({ page, url });
   expect(withoutHmrPortError(dev.buffer.stderr)).toBe("");
 });
