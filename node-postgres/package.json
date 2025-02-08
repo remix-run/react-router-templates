@@ -35,6 +35,7 @@
     "@types/react-dom": "^19.0.1",
     "dotenv-cli": "^7.4.3",
     "drizzle-kit": "~0.28.1",
+    "react-router-devtools": "^1.1.4",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",

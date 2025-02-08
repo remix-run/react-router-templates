@@ -22,6 +22,7 @@
     "@types/react-dom": "^19.0.1",
     "@vercel/node": "^5.1.2",
     "@vercel/react-router": "^1.0.2",
+    "react-router-devtools": "^1.1.4",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
