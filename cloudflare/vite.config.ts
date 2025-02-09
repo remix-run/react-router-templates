@@ -8,7 +8,10 @@ export default defineConfig(({ isSsrBuild }) => ({
   build: {
     rollupOptions: isSsrBuild
       ? {
-          input: "./workers/app.ts",
+          input: {
+            "index.js": "virtual:react-router/server-build",
+            "worker.js": "./workers/app.ts",
+          },
         }
       : undefined,
   },
@@ -20,6 +23,20 @@ export default defineConfig(({ isSsrBuild }) => ({
     }),
     tailwindcss(),
     reactRouter(),
+    {
+      name: "react-router-cloudflare-workers",
+      config: () => ({
+        build: {
+          rollupOptions: isSsrBuild
+            ? {
+                output: {
+                  entryFileNames: "[name]",
+                },
+              }
+            : undefined,
+        },
+      }),
+    },
     tsconfigPaths(),
   ],
 }));
