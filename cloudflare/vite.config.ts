@@ -14,13 +14,13 @@ export default defineConfig(({ isSsrBuild }) => ({
       : undefined,
   },
   plugins: [
+    reactRouterDevTools(),
     cloudflareDevProxy({
       getLoadContext({ context }) {
         return { cloudflare: context.cloudflare };
       },
     }),
     tailwindcss(),
-    reactRouterDevTools(),
     reactRouter(),
     tsconfigPaths(),
   ],

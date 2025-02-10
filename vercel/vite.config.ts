@@ -7,5 +7,10 @@ export default defineConfig(({ command }) => ({
   ssr: {
     noExternal: command === "build" ? true : undefined,
   },
-  plugins: [tailwindcss(), reactRouterDevTools(), reactRouter(), tsconfigPaths()],
+  plugins: [
+    reactRouterDevTools(),
+    tailwindcss(),
+    reactRouter(),
+    tsconfigPaths(),
+  ],
 }));
