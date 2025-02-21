@@ -10,10 +10,11 @@
   "dependencies": {
     "@react-router/express": "*",
     "@react-router/node": "*",
+    "@vercel/react-router": "^1.0.2",
     "compression": "^1.7.5",
     "express": "^4.21.1",
-    "morgan": "^1.10.0",
     "isbot": "^5.1.17",
+    "morgan": "^1.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "*"
