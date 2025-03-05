@@ -149,10 +149,10 @@ importers:
   default:
     dependencies:
       '@react-router/node':
-        specifier: ^7.2.0
+        specifier: '*'
         version: 7.2.0(react-router@7.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.8.2)
       '@react-router/serve':
-        specifier: ^7.2.0
+        specifier: '*'
         version: 7.2.0(react-router@7.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.8.2)
       isbot:
         specifier: ^5.1.23
@@ -164,7 +164,7 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
       react-router:
-        specifier: ^7.2.0
+        specifier: '*'
         version: 7.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@react-router/dev':
