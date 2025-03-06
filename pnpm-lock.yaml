@@ -272,7 +272,7 @@ importers:
         specifier: ^5.7.2
         version: 5.8.2
       vite:
-        specifier: ^6.0.11
+        specifier: ^6.2.0
         version: 6.2.0(@types/node@20.17.23)(jiti@2.4.2)(lightningcss@1.29.1)(tsx@4.19.2)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: ^5.1.4
