@@ -37,4 +37,4 @@ jobs:
         run: pnpm playwright install --with-deps ${{ matrix.browser }}
       - name: Run Playwright tests
         working-directory: .tests
-        run: pnpm test -- --project=${{ matrix.browser }}
+        run: pnpm test --project=${{ matrix.browser }}
