@@ -9,7 +9,8 @@
     "dev": "react-router dev",
     "start": "wrangler dev",
     "deploy": "npm run build && wrangler deploy",
-    "typecheck": "react-router typegen && tsc -b"
+    "cf-types": "wrangler types",
+    "typecheck": "npm run cf-types && react-router typegen && tsc -b"
   },
   "dependencies": {
     "@react-router/node": "*",
@@ -21,7 +22,6 @@
     "react-router": "*"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241112.0",
     "@react-router/dev": "*",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20",
@@ -33,6 +33,6 @@
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4",
-    "wrangler": "^3.87.0"
+    "wrangler": "^4.0.0"
   }
 }
