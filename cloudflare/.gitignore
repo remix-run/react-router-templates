@@ -9,3 +9,5 @@
 # Cloudflare
 .mf
 .wrangler
+.dev.vars*
+
