@@ -9,8 +9,7 @@
     "dev": "react-router dev",
     "start": "wrangler dev",
     "deploy": "npm run build && wrangler deploy",
-    "cf-types": "wrangler types",
-    "typecheck": "npm run cf-types && react-router typegen && tsc -b"
+    "typecheck": "wrangler types && react-router typegen && tsc -b"
   },
   "dependencies": {
     "@react-router/node": "*",
