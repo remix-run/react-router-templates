@@ -1,6 +1,5 @@
 import { drizzle, type DrizzleD1Database } from "drizzle-orm/d1";
 import * as schema from "./database/schema";
-import type { ExecutionContext } from "@cloudflare/workers-types";
 import type { AppLoadContext } from "react-router";
 
 declare global {
