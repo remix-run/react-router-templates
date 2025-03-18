@@ -32,6 +32,14 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
+## Previewing the Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
 ## Building for Production
 
 Create a production build:

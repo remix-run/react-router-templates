@@ -4,6 +4,7 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
+    "preview": "vite preview",
     "start": "wrangler dev",
     "deploy": "npm run build && wrangler deploy",
     "typecheck": "wrangler types && react-router typegen && tsc -b"
