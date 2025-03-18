@@ -17,7 +17,19 @@ test("dev", async ({ page, $ }) => {
 
   const url = await matchLine(dev.stdout, urlRegex.viteDev);
   await workflow({ page, url });
-  expect(dev.buffer.stderr).toBe("");
+
+  const ignoredLines = [
+    "The version of Wrangler you are using is now out-of-date",
+    "Please update to the latest version to prevent critical errors",
+    "Run `npm install --save-dev wrangler@4` to update to the latest version",
+    "After installation, run Wrangler with `npx wrangler`"
+  ];
+  const filteredStderr = dev.buffer.stderr
+    .split("\n")
+    .filter(line => !ignoredLines.some(ignoredLine => line.includes(ignoredLine)))
+    .join("\n")
+    .trim();
+  expect(filteredStderr).toBe("");
 });
 
 test("build + start", async ({ page, $ }) => {
@@ -31,7 +43,19 @@ test("build + start", async ({ page, $ }) => {
 
   const url = await matchLine(start.stdout, urlRegex.wrangler);
   await workflow({ page, url });
-  expect(start.buffer.stderr).toBe("");
+
+  const ignoredLines = [
+    "The version of Wrangler you are using is now out-of-date",
+    "Please update to the latest version to prevent critical errors",
+    "Run `npm install --save-dev wrangler@4` to update to the latest version",
+    "After installation, run Wrangler with `npx wrangler`"
+  ];
+  const filteredStderr = start.buffer.stderr
+    .split("\n")
+    .filter(line => !ignoredLines.some(ignoredLine => line.includes(ignoredLine)))
+    .join("\n")
+    .trim();
+  expect(filteredStderr).toBe("");
 });
 
 async function workflow({ page, url }: { page: Page; url: string }) {
