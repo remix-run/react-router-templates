@@ -2,10 +2,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
     "dev": "react-router dev",
-    "preview": "vite preview",
-    "start": "wrangler dev",
+    "build": "react-router build",
+    "preview": "npm run build && vite preview",
     "deploy": "npm run build && wrangler deploy",
     "typecheck": "wrangler types && react-router typegen && tsc -b"
   },
