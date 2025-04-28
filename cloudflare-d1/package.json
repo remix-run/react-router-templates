@@ -12,17 +12,17 @@
     "typecheck": "wrangler types && react-router typegen && tsc -b"
   },
   "dependencies": {
-    "@react-router/node": "^7.3.0",
-    "@react-router/serve": "^7.3.0",
+    "@react-router/node": "^7.5.3",
+    "@react-router/serve": "^7.5.3",
     "drizzle-orm": "~0.36.3",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.3.0"
+    "react-router": "^7.5.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250303.0",
-    "@react-router/dev": "^7.3.0",
+    "@react-router/dev": "^7.5.3",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
