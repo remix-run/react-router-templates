@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@react-router/dev": "^7.5.3",
-    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/vite": "^4.1.4",
     "@types/compression": "^1.7.5",
     "@types/express": "^5.0.1",
     "@types/express-serve-static-core": "^5.0.6",
@@ -29,7 +29,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "cross-env": "^7.0.3",
-    "tailwindcss": "^4.0.0",
+    "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4"
