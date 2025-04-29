@@ -19,42 +19,37 @@ test("dev", async ({ page, $ }) => {
   await workflow({ page, url });
 
   const ignoredLines = [
-    "The version of Wrangler you are using is now out-of-date",
-    "Please update to the latest version to prevent critical errors",
-    "Run `npm install --save-dev wrangler@4` to update to the latest version",
-    "After installation, run Wrangler with `npx wrangler`"
+    /Default inspector port \d{4} not available, using \d{4} instead/,
   ];
   const filteredStderr = dev.buffer.stderr
     .split("\n")
-    .filter(line => !ignoredLines.some(ignoredLine => line.includes(ignoredLine)))
-    .join("\n")
-    .trim();
+    .filter(
+      (line) =>
+        line && !ignoredLines.some((ignoredLine) => ignoredLine.test(line)),
+    )
+    .join("\n");
   expect(filteredStderr).toBe("");
 });
 
-test("build + start", async ({ page, $ }) => {
-  await $(`pnpm db:migrate`);
+test("preview", async ({ page, $ }) => {
+  const port = await getPort();
+  const preview = $(`pnpm preview --port ${port}`);
 
-  await $(`pnpm build`);
-
-  const port1 = await getPort();
-  const port2 = await getPort();
-  const start = $(`pnpm start --port ${port1} --inspector-port ${port2}`);
-
-  const url = await matchLine(start.stdout, urlRegex.wrangler);
+  const url = await matchLine(preview.stdout, urlRegex.viteDev);
   await workflow({ page, url });
 
   const ignoredLines = [
-    "The version of Wrangler you are using is now out-of-date",
-    "Please update to the latest version to prevent critical errors",
-    "Run `npm install --save-dev wrangler@4` to update to the latest version",
-    "After installation, run Wrangler with `npx wrangler`"
+    /The build was canceled/,
+    /Error running vite-plugin-cloudflare:nodejs-compat on Tailwind CSS output\. Skipping\./,
+    /Default inspector port \d{4} not available, using \d{4} instead/,
   ];
-  const filteredStderr = start.buffer.stderr
+  const filteredStderr = preview.buffer.stderr
     .split("\n")
-    .filter(line => !ignoredLines.some(ignoredLine => line.includes(ignoredLine)))
-    .join("\n")
-    .trim();
+    .filter(
+      (line) =>
+        line && !ignoredLines.some((ignoredLine) => ignoredLine.test(line)),
+    )
+    .join("\n");
   expect(filteredStderr).toBe("");
 });
 

@@ -20,14 +20,17 @@ test("dev", async ({ page, $ }) => {
   ];
   const filteredStderr = dev.buffer.stderr
     .split("\n")
-    .filter(line => line && !ignoredLines.some(ignoredLine => ignoredLine.test(line)))
+    .filter(
+      (line) =>
+        line && !ignoredLines.some((ignoredLine) => ignoredLine.test(line)),
+    )
     .join("\n");
   expect(filteredStderr).toBe("");
 });
 
 test("preview", async ({ page, $ }) => {
-  const port1 = await getPort();
-  const preview = $(`pnpm preview --port ${port1}`);
+  const port = await getPort();
+  const preview = $(`pnpm preview --port ${port}`);
 
   const url = await matchLine(preview.stdout, urlRegex.viteDev);
   await workflow({ page, url });
@@ -39,7 +42,10 @@ test("preview", async ({ page, $ }) => {
   ];
   const filteredStderr = preview.buffer.stderr
     .split("\n")
-    .filter(line => line && !ignoredLines.some(ignoredLine => ignoredLine.test(line)))
+    .filter(
+      (line) =>
+        line && !ignoredLines.some((ignoredLine) => ignoredLine.test(line)),
+    )
     .join("\n");
   expect(filteredStderr).toBe("");
 });
