@@ -12,14 +12,14 @@
   "dependencies": {
     "@react-router/express": "^7.5.3",
     "@react-router/node": "^7.5.3",
-    "compression": "^1.7.5",
+    "compression": "^1.8.0",
     "drizzle-orm": "~0.36.3",
     "express": "^5.1.0",
     "isbot": "^5.1.27",
     "morgan": "^1.10.0",
     "postgres": "^3.4.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-router": "^7.5.3"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "@types/pg": "^8.11.14",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "dotenv-cli": "^7.4.3",
+    "dotenv-cli": "^8.0.0",
     "drizzle-kit": "~0.28.1",
     "tailwindcss": "^4.1.4",
     "tsx": "^4.19.2",
