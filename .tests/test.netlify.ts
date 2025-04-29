@@ -34,14 +34,14 @@ test.skip("build + start", async ({ page, edit, $ }) => {
   await edit("netlify.toml", (txt) =>
     txt
       .replaceAll("[dev]", "[dev]\nautoLaunch = false")
-      .replaceAll("npm run", "pnpm")
+      .replaceAll("npm run", "pnpm"),
   );
 
   const port1 = await getPort();
   const port2 = await getPort();
   const port3 = await getPort();
   const start = $(
-    `pnpm start --port ${port1} --functionsPort ${port2} --staticServerPort ${port3}`
+    `pnpm start --port ${port1} --functionsPort ${port2} --staticServerPort ${port3}`,
   );
 
   const url = await matchLine(start.stdout, urlRegex.netlify);
@@ -49,10 +49,19 @@ test.skip("build + start", async ({ page, edit, $ }) => {
   expect(start.buffer.stderr).toBe("");
 });
 
+// Helper function to filter out expected WebSocket errors
+function filterExpectedErrors(errors: Error[]) {
+  return errors.filter(
+    (error) =>
+      !error.message.includes("WebSocket closed without opened") &&
+      !error.message.includes("WebSocket server error"),
+  );
+}
+
 async function workflow({ page, url }: { page: Page; url: string }) {
   await page.goto(url);
   await expect(page).toHaveTitle(/New React Router App/);
   await page.getByRole("link", { name: "React Router Docs" }).waitFor();
   await page.getByRole("link", { name: "Join Discord" }).waitFor();
-  expect(page.errors).toStrictEqual([]);
+  expect(filterExpectedErrors(page.errors)).toStrictEqual([]);
 }

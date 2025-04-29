@@ -25,12 +25,12 @@ declare module "@playwright/test" {
 
 type Edit = (
   file: string,
-  transform: (contents: string) => string
+  transform: (contents: string) => string,
 ) => Promise<void>;
 
 type Command = (
   command: string,
-  options?: Pick<Options, "env" | "timeout">
+  options?: Pick<Options, "env" | "timeout">,
 ) => ResultPromise<{ reject: false }> & {
   buffer: { stdout: string; stderr: string };
 };
@@ -116,7 +116,7 @@ export const testTemplate = (template: string) =>
 export function matchLine(
   stream: Readable,
   pattern: RegExp,
-  options: { timeout?: number } = {}
+  options: { timeout?: number } = {},
 ) {
   // Prepare error outside of promise so that stacktrace points to caller of `matchLine`
   const timeout = new Error(`Timed out - Could not find pattern: ${pattern}`);
@@ -145,4 +145,6 @@ export const urlRegex = {
 // Ultimately, we should provide better primitives for building custom servers
 // something like `createRequestHandler(pathToBuild)`.
 export const withoutHmrPortError = (stderr: string) =>
-  stderr.replace(/WebSocket server error: Port is already in use/, "").trim();
+  stderr
+    .replace(/WebSocket server error: Port \d+ is already in use/, "")
+    .trim();
