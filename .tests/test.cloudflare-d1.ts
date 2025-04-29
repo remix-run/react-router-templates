@@ -31,27 +31,29 @@ test("dev", async ({ page, $ }) => {
   expect(filteredStderr).toBe("");
 });
 
-// test("preview", async ({ page, $ }) => {
-//   const port = await getPort();
-//   const preview = $(`pnpm preview --port ${port}`);
+test("build + start", async ({ page, $ }) => {
+  await $(`pnpm db:migrate`);
 
-//   const url = await matchLine(preview.stdout, urlRegex.viteDev);
-//   await workflow({ page, url });
+  const port = await getPort();
+  const preview = $(`pnpm preview --port ${port}`);
 
-//   const ignoredLines = [
-//     /The build was canceled/,
-//     /Error running vite-plugin-cloudflare:nodejs-compat on Tailwind CSS output\. Skipping\./,
-//     /Default inspector port \d{4} not available, using \d{4} instead/,
-//   ];
-//   const filteredStderr = preview.buffer.stderr
-//     .split("\n")
-//     .filter(
-//       (line) =>
-//         line && !ignoredLines.some((ignoredLine) => ignoredLine.test(line)),
-//     )
-//     .join("\n");
-//   expect(filteredStderr).toBe("");
-// });
+  const url = await matchLine(preview.stdout, urlRegex.viteDev);
+  await workflow({ page, url });
+
+  const ignoredLines = [
+    /The build was canceled/,
+    /Error running vite-plugin-cloudflare:nodejs-compat on Tailwind CSS output\. Skipping\./,
+    /Default inspector port \d{4} not available, using \d{4} instead/,
+  ];
+  const filteredStderr = preview.buffer.stderr
+    .split("\n")
+    .filter(
+      (line) =>
+        line && !ignoredLines.some((ignoredLine) => ignoredLine.test(line)),
+    )
+    .join("\n");
+  expect(filteredStderr).toBe("");
+});
 
 async function workflow({ page, url }: { page: Page; url: string }) {
   await page.goto(url);
