@@ -27,7 +27,7 @@
     "netlify-cli": "^17.38.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.8.3",
-    "vite": "^5.4.11",
+    "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

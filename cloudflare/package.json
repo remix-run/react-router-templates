@@ -16,8 +16,8 @@
     "react-router": "^7.5.3"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.0.0",
-    "@cloudflare/workers-types": "^4.20250303.0",
+    "@cloudflare/vite-plugin": "^1.0.12",
+    "@cloudflare/workers-types": "^4.20250429.0",
     "@react-router/dev": "^7.5.3",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20",
@@ -25,8 +25,8 @@
     "@types/react-dom": "^19.1.2",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.8.3",
-    "vite": "^6.2.1",
+    "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "wrangler": "^4.7.2"
+    "wrangler": "^4.13.2"
   }
 }
