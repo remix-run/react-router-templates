@@ -2,7 +2,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "clean": "rm -rf ./test-results && rm -rf ./tmp"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.0",
