@@ -18,6 +18,10 @@ We intend to keep the number of templates in this repository to a minimum, and s
 
 If you have a template you have developed and maintain, please submit a PR to add it to the [list below](#community-templates).
 
+## Questions
+
+If you have a question about React Router please open up a discussion on [GitHub Discussions](https://github.com/remix-run/react-router/discussions) or reach out on [Discord](https://rmx.as/discord).
+
 ## Templates
 
 ### Official Templates
