@@ -24,55 +24,73 @@ If you have a template you have developed and maintain, please submit a PR to ad
 
 The following templates are maintained by the React Router team. For more information on each template, checkout out the README of the template repository.
 
-Default template:
+**Default template:**
+
+A full-featured production-ready template with server-side rendering, TypeScript, TailwindCSS, and Docker support. Perfect for building scalable applications with built-in asset optimization and hot module replacement.
 
 ```bash
 npx create-react-router@latest
 ```
 
-Minimal template (used for https://reactrouter.com/new):
+**Minimal template:**
+
+A lightweight template used for https://reactrouter.com/new. Designed for experimentation and demo applications. Not recommended for production use, but ideal for learning React Router's core concepts or creating reproductions.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/minimal
 ```
 
-JavaScript only template:
+**JavaScript only template:**
+
+A TypeScript-free version of the default template, offering the same production-ready features but without type checking. Great for teams preferring plain JavaScript.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/javascript
 ```
 
-Node custom server template:
+**Node custom server template:**
+
+Extends the default template with a customizable Node.js server implementation, giving you full control over server configuration and middleware.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/node-custom-server
 ```
 
-Node PostgreSQL template:
+**Node PostgreSQL template:**
+
+Adds PostgreSQL database support with DrizzleORM to the default template, including database migrations and type-safe queries.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/node-postgres
 ```
 
-Cloudflare template:
+**Cloudflare template:**
+
+Optimized for Cloudflare's edge platform with built-in deployment workflows using Wrangler CLI. Includes preview deployments and progressive rollouts.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/cloudflare
 ```
 
-Cloudflare with D1 template:
+**Cloudflare with D1 template:**
+
+Extends the Cloudflare template with D1 database support, including migrations and production database setup. Perfect for edge-first applications with persistent data.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/cloudflare-d1
 ```
 
-Vercel template:
+**Vercel template:**
+
+Pre-configured for Vercel deployment with optimized serverless functions and edge caching. Includes one-click deployment to Vercel's platform.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/vercel
 ```
 
-Netlify template:
+**Netlify template:**
+
+Ready for Netlify deployment with serverless functions and edge caching. Features one-click deployment to Netlify's platform.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/netlify
@@ -80,7 +98,11 @@ npx create-react-router@latest --template remix-run/react-router-templates/netli
 
 ### Community Templates
 
-- [Epic Stack](https://github.com/epicweb-dev/epic-stack - An opinionated project starter and reference that allows teams to ship their ideas to production faster and on a more stable foundation based on the experience of Kent C. Dodds and contributors.
+The following templates are maintained by the community. For more information on each template, checkout out the README of the template repository.
+
+If you have a template you have developed and maintain, please submit a PR to add it.
+
+- [Epic Stack](https://github.com/epicweb-dev/epic-stack) - An opinionated project starter and reference that allows teams to ship their ideas to production faster and on a more stable foundation based on the experience of Kent C. Dodds and contributors.
 
 - [Edge-first Starter Kit](https://github.com/edgefirst-dev/starter) - A full-stack starter kit for Edge-first applications built with React on top of Cloudflare Developer Platform.
 
