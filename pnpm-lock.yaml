@@ -84,12 +84,6 @@ importers:
 
   cloudflare-d1:
     dependencies:
-      '@react-router/node':
-        specifier: ^7.5.3
-        version: 7.5.3(react-router@7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
-      '@react-router/serve':
-        specifier: ^7.5.3
-        version: 7.5.3(react-router@7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
       drizzle-orm:
         specifier: ~0.36.3
         version: 0.36.3(@cloudflare/workers-types@4.20250429.0)(@opentelemetry/api@1.8.0)(@types/pg@8.11.14)(@types/react@19.1.2)(postgres@3.4.5)(react@19.1.0)
