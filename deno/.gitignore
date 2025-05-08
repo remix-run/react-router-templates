@@ -1,0 +1,14 @@
+.DS_Store
+.env
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+
+# Database
+# Update to reflect your DATABASE_URL
+db.sqlite3
+db.sqlite3-shm
+db.sqlite3-pos
+db.sqlite3-wal

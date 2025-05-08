@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@react-router/fs-routes": "^7.6.0",
+    "@react-router/node": "^7.5.0",
+    "isbot": "^5"
+  }
+}
