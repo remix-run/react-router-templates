@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-router/node": "^7.5.0",
+    "isbot": "^5"
+  }
+}
