@@ -48,9 +48,6 @@ importers:
       '@cloudflare/vite-plugin':
         specifier: ^1.0.12
         version: 1.0.12(rollup@4.35.0)(vite@6.3.3(@types/node@20.17.6)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.2)(yaml@2.6.1))(workerd@1.20250424.0)(wrangler@4.13.2(@cloudflare/workers-types@4.20250429.0))
-      '@cloudflare/workers-types':
-        specifier: ^4.20250429.0
-        version: 4.20250429.0
       '@react-router/dev':
         specifier: ^7.5.3
         version: 7.5.3(@react-router/serve@7.5.3(react-router@7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@20.17.6)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.3(@types/node@20.17.6)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.2)(yaml@2.6.1))(wrangler@4.13.2(@cloudflare/workers-types@4.20250429.0))(yaml@2.6.1)
@@ -103,9 +100,6 @@ importers:
       '@cloudflare/vite-plugin':
         specifier: ^1.0.12
         version: 1.0.12(rollup@4.35.0)(vite@6.3.3(@types/node@20.17.6)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.2)(yaml@2.6.1))(workerd@1.20250424.0)(wrangler@4.13.2(@cloudflare/workers-types@4.20250429.0))
-      '@cloudflare/workers-types':
-        specifier: ^4.20250429.0
-        version: 4.20250429.0
       '@react-router/dev':
         specifier: ^7.5.3
         version: 7.5.3(@react-router/serve@7.5.3(react-router@7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3))(@types/node@20.17.6)(babel-plugin-macros@3.1.0)(jiti@2.4.2)(lightningcss@1.29.2)(react-router@7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.3(@types/node@20.17.6)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.2)(yaml@2.6.1))(wrangler@4.13.2(@cloudflare/workers-types@4.20250429.0))(yaml@2.6.1)
@@ -6899,7 +6893,8 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20250424.0':
     optional: true
 
-  '@cloudflare/workers-types@4.20250429.0': {}
+  '@cloudflare/workers-types@4.20250429.0':
+    optional: true
 
   '@colors/colors@1.6.0': {}
 
