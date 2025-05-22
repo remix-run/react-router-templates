@@ -4,14 +4,7 @@
   "tasks": {
     "dev": "deno run -A ./node_modules/.bin/react-router dev",
     "build": "deno run -A ./node_modules/.bin/react-router build",
-    "patch-build": {
-      "command": "sed -i '' 's/react-dom\\/server/react-dom\\/server.node/g' ./build/server/index.js",
-      "dependencies": ["build"]
-    },
-    "start": {
-      "command": "deno run -A server.ts",
-      "dependencies": ["patch-build"]
-    },
+    "start": "deno run -A server.ts",
     "typegen": "deno run -A ./node_modules/.bin/react-router typegen",
     "typecheck": {
       "command": "deno check ./src",
