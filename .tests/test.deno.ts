@@ -3,7 +3,7 @@ import getPort from "get-port";
 
 import { matchLine, testTemplate, urlRegex } from "./utils";
 
-const test = testTemplate("deno");
+const test = testTemplate("deno", "deno install");
 
 test("typecheck", async ({ $ }) => {
   await $(`deno task typecheck`);

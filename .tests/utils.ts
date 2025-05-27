@@ -35,7 +35,7 @@ type Command = (
   buffer: { stdout: string; stderr: string };
 };
 
-export const testTemplate = (template: string) =>
+export const testTemplate = (template: string, installCommand?: string) =>
   playwrightTest.extend<{
     cwd: string;
     edit: Edit;
@@ -57,7 +57,23 @@ export const testTemplate = (template: string) =>
         errorOnExist: true,
         filter: (src) => Path.normalize(src) !== nodeModulesPath,
       });
-      fs.symlinkSync(nodeModulesPath, Path.join(cwd, "node_modules"));
+
+      if (installCommand) {
+        const spawn = execa({
+          cwd,
+          env: {
+            NO_COLOR: "1",
+            FORCE_COLOR: "0",
+          },
+          reject: false,
+        });
+
+        const [file, ...args] = parseCommandString(installCommand);
+
+        await spawn(file, args);
+      } else {
+        fs.symlinkSync(nodeModulesPath, Path.join(cwd, "node_modules"));
+      }
 
       await use(cwd);
 
