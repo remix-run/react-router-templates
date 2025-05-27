@@ -14,6 +14,7 @@ test("dev", async ({ page, $ }) => {
   const dev = $(`deno task dev --port ${port}`);
 
   const url = await matchLine(dev.stdout, urlRegex.viteDev);
+
   await workflow({ page, url });
   const [, ...restLines] = dev.buffer.stderr.split("\n");
   expect(restLines.join("\n")).toBe("");
@@ -26,9 +27,10 @@ test("build + start", async ({ page, $ }) => {
   const start = $(`deno task start`, { env: { PORT: String(port) } });
 
   const url = await matchLine(start.stderr, urlRegex.deno);
-  await workflow({ page, url });
   const localURL = new URL(url);
   localURL.hostname = "localhost";
+
+  await workflow({ page, url: localURL.href });
   const [, ...restLines] = start.buffer.stderr.split("\n");
   expect(restLines.join("\n")).toBe(
     `Listening on ${url} (${localURL})\n`,
