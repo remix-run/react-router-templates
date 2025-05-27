@@ -1,4 +1,4 @@
-import { serveDir } from "@std/http/file-server";
+import { serveDir, serveFile } from "@std/http/file-server";
 import type { ServerBuild } from "react-router";
 import { createRequestHandler } from "react-router";
 
@@ -11,6 +11,10 @@ const PORT = parseInt(Deno.env.get("PORT") ?? "8000", 10);
 
 Deno.serve({ port: PORT }, async (request: Request): Promise<Response> => {
   const pathname = new URL(request.url).pathname;
+
+  if (pathname === "/favicon.ico") {
+    return serveFile(request, "build/client/favicon.ico");
+  }
 
   if (pathname.startsWith("/assets/")) {
     return serveDir(request, {
