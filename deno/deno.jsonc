@@ -5,10 +5,10 @@
     "sloppy-imports"
   ],
   "tasks": {
-    "build": "deno run -A ./node_modules/.bin/react-router build",
-    "dev": "deno run -A ./node_modules/.bin/react-router dev",
+    "build": "deno run -A npm:@react-router/dev@7.6.1 build",
+    "dev": "deno run -A npm:@react-router/dev@7.6.1 dev",
     "start": "deno run --allow-env --allow-net --allow-read ./server.ts",
-    "typegen": "deno run -A ./node_modules/.bin/react-router typegen",
+    "typegen": "deno run -A npm:@react-router/dev@7.6.1 typegen",
     "typecheck": {
       "command": "deno check .",
       "dependencies": [
