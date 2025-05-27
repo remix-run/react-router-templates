@@ -1,0 +1,44 @@
+import { expect, Page } from "@playwright/test";
+import getPort from "get-port";
+
+import { matchLine, testTemplate, urlRegex } from "./utils";
+
+const test = testTemplate("deno");
+
+test("typecheck", async ({ $ }) => {
+  await $(`deno task typecheck`);
+});
+
+test("dev", async ({ page, $ }) => {
+  const port = await getPort();
+  const dev = $(`deno task dev --port ${port}`);
+
+  const url = await matchLine(dev.stdout, urlRegex.viteDev);
+  await workflow({ page, url });
+  const [, ...restLines] = dev.buffer.stderr.split("\n");
+  expect(restLines.join("\n")).toBe("");
+});
+
+test("build + start", async ({ page, $ }) => {
+  await $(`deno task build`);
+
+  const port = await getPort();
+  const start = $(`deno task start`, { env: { PORT: String(port) } });
+
+  const url = await matchLine(start.stderr, urlRegex.deno);
+  await workflow({ page, url });
+  const localURL = new URL(url);
+  localURL.hostname = "localhost";
+  const [, ...restLines] = start.buffer.stderr.split("\n");
+  expect(restLines.join("\n")).toBe(
+    `Listening on ${url} (${localURL})\n`,
+  );
+});
+
+async function workflow({ page, url }: { page: Page; url: string }) {
+  await page.goto(url);
+  await expect(page).toHaveTitle(/New React Router App/);
+  await page.getByRole("link", { name: "React Router Docs" }).waitFor();
+  await page.getByRole("link", { name: "Join Discord" }).waitFor();
+  expect(page.errors).toStrictEqual([]);
+}

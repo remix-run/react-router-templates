@@ -7,7 +7,9 @@ const handler = createRequestHandler(
   "production",
 );
 
-Deno.serve(async (request: Request): Promise<Response> => {
+const PORT = parseInt(Deno.env.get("PORT") ?? "8000", 10);
+
+Deno.serve({ port: PORT }, async (request: Request): Promise<Response> => {
   const pathname = new URL(request.url).pathname;
 
   if (pathname.startsWith("/assets/")) {
