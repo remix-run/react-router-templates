@@ -11,7 +11,6 @@ using React Router.
 - 🔄 Data loading and mutations
 - 🔒 TypeScript by default
 - 🎉 TailwindCSS for styling
-- 💾 Deno KV
 - 📖 [React Router docs](https://reactrouter.com/)
 
 ## Getting Started
@@ -25,9 +24,6 @@ deno install
 ```
 
 ### Development
-
-Copy `.env.example` to `.env` and provide a `DATABASE_URL` with your file
-string.
 
 Start the development server with HMR:
 
@@ -47,9 +43,13 @@ deno task build
 
 ## Deployment
 
-<!-- ### Deno Deploy
+### Deno Deploy
 
-### Netlify Edge Functions -->
+After running a build, deploy to https://deno.com/deploy with the following command:
+
+```bash
+deno run -A jsr:@deno/deployctl deploy --entrypoint server.ts
+```
 
 ### DIY Deployment
 

@@ -1,9 +1,24 @@
-import "jsr:@std/dotenv/load";
-import { handler } from "./server/app.ts";
+import { serveDir } from "@std/http/file-server";
+import type { ServerBuild } from "react-router";
+import { createRequestHandler } from "react-router";
 
-const PORT = Number.parseInt(Deno.env.get("PORT") || "3000");
+const handler = createRequestHandler(
+  () => import("./build/server/index.js") as Promise<ServerBuild>,
+  "production",
+);
 
-console.log("Starting production server");
+Deno.serve(async (request: Request): Promise<Response> => {
+  const pathname = new URL(request.url).pathname;
 
-Deno.serve({ port: PORT }, handler);
-console.log(`Server is running on http://localhost:${PORT}`);
+  if (pathname.startsWith("/assets/")) {
+    return serveDir(request, {
+      fsRoot: "build/client/assets",
+      urlRoot: "assets",
+      headers: [
+        "Cache-Control: public, max-age=31536000, immutable",
+      ],
+    });
+  }
+
+  return await handler(request);
+});

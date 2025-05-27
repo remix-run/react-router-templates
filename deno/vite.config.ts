@@ -3,19 +3,17 @@ import deno from "@deno/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [reactRouter(), deno(), tailwindcss()],
-  build: {
-    target: "ESNext",
-  },
-  resolve: {
-    alias: {
-      "~/": new URL("./app/", import.meta.url).pathname,
-      ...(command === "build"
-        ? {
-          "react-dom/server": "react-dom/server.node",
-        }
-        : {}),
+  environments: {
+    ssr: {
+      build: {
+        target: "ESNext",
+      },
+      resolve: {
+        conditions: ["deno"],
+        externalConditions: ["deno"],
+      },
     },
   },
-}));
+});
