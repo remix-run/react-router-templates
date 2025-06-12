@@ -2,8 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json",
   "nodeModulesDir": "auto",
   "unstable": [
-    "sloppy-imports",
-    "detect-cjs"
+    "sloppy-imports"
   ],
   "tasks": {
     "build": "deno run -A npm:@react-router/dev@0.0.0-experimental-879db62f3 build",
