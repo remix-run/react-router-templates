@@ -115,3 +115,5 @@ If you have a template you have developed and maintain, please submit a PR to ad
 - [Forge 42 base-stack](https://github.com/forge-42/base-stack) - A comprehensive React Router 7 template with React 19, TypeScript, TailwindCSS, Vite, Hono server, and built-in tools for testing, i18n, SEO, and development workflow.
 
 - [React Router with Mantine](https://github.com/samui-build/react-router-mantine) - React Router 7 default template but with [Mantine](https://mantine.dev) instead of TailwindCSS.
+
+- [VITE-SHADCN](https://github.com/yluiop123/vite-shadcn) - a Shadcn Admin UI built with React Router 7 and Shadcn, Vite, React, Zustand.
