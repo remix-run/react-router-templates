@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "targets": {
+    "react-server": {
+      "context": "react-server",
+      "source": "src/server.tsx",
+      "scopeHoist": false,
+      "includeNodeModules": {
+        "@mjackson/node-fetch-server": false,
+        "compression": false,
+        "express": false
+      }
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "@tailwindcss/postcss": {}
+    }
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development parcel --no-autoinstall",
+    "build": "parcel build --no-autoinstall",
+    "start": "cross-env NODE_ENV=production node dist/server/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "overrides": {
+    "react": "0.0.0-experimental-06e89951-20250620",
+    "react-dom": "0.0.0-experimental-06e89951-20250620",
+    "react-router": "0.0.0-experimental-14b5858e8"
+  },
+  "dependencies": {
+    "@mjackson/node-fetch-server": "0.7.0",
+    "@parcel/runtime-rsc": "^2.15.2",
+    "buffer": "^6.0.3",
+    "compression": "^1.8.0",
+    "cross-env": "^7.0.3",
+    "express": "^5.1.0",
+    "react": "0.0.0-experimental-06e89951-20250620",
+    "react-dom": "0.0.0-experimental-06e89951-20250620",
+    "react-router": "0.0.0-experimental-14b5858e8",
+    "react-server-dom-parcel": "0.0.0-experimental-06e89951-20250620"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.10",
+    "@tailwindcss/typography": "0.5.16",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "parcel": "^2.15.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3"
+  }
+}

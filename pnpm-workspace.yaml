@@ -9,3 +9,4 @@ packages:
   - "node-custom-server"
   - "node-postgres"
   - "vercel"
+  - "unstable_rsc/*"
