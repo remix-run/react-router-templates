@@ -8,8 +8,6 @@
     "typecheck": "tsc --noEmit"
   },
   "overrides": {
-    "react": "0.0.0-experimental-06e89951-20250620",
-    "react-dom": "0.0.0-experimental-06e89951-20250620",
     "react-router": "0.0.0-experimental-14b5858e8"
   },
   "dependencies": {
@@ -17,8 +15,8 @@
     "compression": "^1.8.0",
     "cross-env": "^7.0.3",
     "express": "^5.1.0",
-    "react": "0.0.0-experimental-06e89951-20250620",
-    "react-dom": "0.0.0-experimental-06e89951-20250620",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-router": "0.0.0-experimental-14b5858e8"
   },
   "devDependencies": {
