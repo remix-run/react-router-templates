@@ -1,4 +1,4 @@
-import { createFromReadableStream } from "@hiogawa/vite-rsc/ssr";
+import { createFromReadableStream } from "@vitejs/plugin-rsc/ssr";
 import { renderToReadableStream as renderHTMLToReadableStream } from "react-dom/server.edge";
 import {
   unstable_routeRSCServerRequest as routeRSCServerRequest,

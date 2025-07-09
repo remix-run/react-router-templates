@@ -14,7 +14,7 @@ import {
 
 // Import the prerender function from the client environment
 import { prerender } from "./prerender" with { env: "react-client" };
-import { routes } from "./routes/routes";
+import { routes } from "./routes";
 
 function fetchServer(request: Request) {
   return matchRSCServerRequest({
