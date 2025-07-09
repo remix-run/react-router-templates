@@ -3,6 +3,7 @@ import compression from "compression";
 import express from "express";
 import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router";
 import {
+  createTemporaryReferenceSet,
   decodeAction,
   decodeFormState,
   decodeReply,
@@ -11,13 +12,14 @@ import {
   // @ts-expect-error - no types for this yet
 } from "react-server-dom-parcel/server.edge";
 
-// Import the prerender function from the client envrionment
+// Import the prerender function from the client environment
 import { prerender } from "./prerender" with { env: "react-client" };
 import { routes } from "./routes/routes";
 
 function fetchServer(request: Request) {
   return matchRSCServerRequest({
     // Provide the React Server touchpoints.
+    createTemporaryReferenceSet,
     decodeAction,
     decodeFormState,
     decodeReply,

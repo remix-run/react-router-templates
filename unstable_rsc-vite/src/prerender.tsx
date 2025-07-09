@@ -8,7 +8,7 @@ import bootstrapScriptContent from "virtual:vite-rsc/bootstrap-script-content";
 
 export async function prerender(
   request: Request,
-  fetchServer: (request: Request) => Promise<Response>
+  fetchServer: (request: Request) => Promise<Response>,
 ): Promise<Response> {
   return await routeRSCServerRequest({
     // The incoming request.
@@ -29,7 +29,7 @@ export async function prerender(
           bootstrapScriptContent,
           // @ts-expect-error - no types for this yet
           formState,
-        }
+        },
       );
     },
   });

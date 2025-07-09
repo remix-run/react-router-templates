@@ -1,5 +1,6 @@
 import {
   createFromReadableStream,
+  createTemporaryReferenceSet,
   encodeReply,
   setServerCallback,
 } from "@hiogawa/vite-rsc/browser";
@@ -16,8 +17,9 @@ import {
 setServerCallback(
   createCallServer({
     createFromReadableStream,
+    createTemporaryReferenceSet,
     encodeReply,
-  })
+  }),
 );
 
 // Get and decode the initial server payload
@@ -37,7 +39,7 @@ createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
       {
         // @ts-expect-error - no types for this yet
         formState,
-      }
+      },
     );
   });
 });

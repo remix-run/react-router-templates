@@ -24,7 +24,7 @@
     "typecheck": "tsc --noEmit"
   },
   "overrides": {
-    "react-router": "0.0.0-experimental-14b5858e8"
+    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
@@ -33,10 +33,10 @@
     "compression": "^1.8.0",
     "cross-env": "^7.0.3",
     "express": "^5.1.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router": "0.0.0-experimental-14b5858e8",
-    "react-server-dom-parcel": "^19.1.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709",
+    "react-server-dom-parcel": "19.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",

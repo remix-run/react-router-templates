@@ -10,6 +10,7 @@ import {
 } from "react-router";
 import {
   createFromReadableStream,
+  createTemporaryReferenceSet,
   encodeReply,
   setServerCallback,
   // @ts-expect-error - no types for this yet
@@ -19,8 +20,9 @@ import {
 setServerCallback(
   createCallServer({
     createFromReadableStream,
+    createTemporaryReferenceSet,
     encodeReply,
-  })
+  }),
 );
 
 // Get and decode the initial server payload
@@ -40,7 +42,7 @@ createFromReadableStream(getRSCStream()).then((payload: RSCServerPayload) => {
       {
         // @ts-expect-error - no types for this yet
         formState,
-      }
+      },
     );
   });
 });

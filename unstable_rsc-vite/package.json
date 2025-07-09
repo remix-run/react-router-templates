@@ -8,19 +8,18 @@
     "typecheck": "tsc --noEmit"
   },
   "overrides": {
-    "react-router": "0.0.0-experimental-14b5858e8"
+    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
     "compression": "^1.8.0",
     "cross-env": "^7.0.3",
     "express": "^5.1.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router": "0.0.0-experimental-14b5858e8"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709"
   },
   "devDependencies": {
-    "@hiogawa/vite-rsc": "0.4.4",
     "@tailwindcss/typography": "0.5.16",
     "@tailwindcss/vite": "^4.1.10",
     "@types/compression": "^1.8.1",
@@ -29,6 +28,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.2",
+    "@vitejs/plugin-rsc": "^0.4.11",
     "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
