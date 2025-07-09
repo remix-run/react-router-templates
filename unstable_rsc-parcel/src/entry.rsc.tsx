@@ -12,8 +12,8 @@ import {
   // @ts-expect-error - no types for this yet
 } from "react-server-dom-parcel/server.edge";
 
-// Import the prerender function from the client environment
-import { prerender } from "./prerender" with { env: "react-client" };
+// Import the generateHTML function from the client environment
+import { generateHTML } from "./entry.ssr" with { env: "react-client" };
 import { routes } from "./routes";
 
 function fetchServer(request: Request) {
@@ -60,7 +60,7 @@ app.get("/.well-known/appspecific/com.chrome.devtools.json", (_, res) => {
 // Hookup our application.
 app.use(
   createRequestListener((request) =>
-    prerender(
+    generateHTML(
       request,
       fetchServer,
       (routes as unknown as { bootstrapScript?: string }).bootstrapScript

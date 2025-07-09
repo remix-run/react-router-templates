@@ -2,7 +2,7 @@
 
 import type { unstable_RSCRouteConfig as RSCRouteConfig } from "react-router";
 
-import "./browser";
+import "./entry.client";
 
 export function routes() {
   return [

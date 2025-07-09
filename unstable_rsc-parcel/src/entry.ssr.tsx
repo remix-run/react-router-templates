@@ -1,14 +1,15 @@
-import { createFromReadableStream } from "@vitejs/plugin-rsc/ssr";
 import { renderToReadableStream as renderHTMLToReadableStream } from "react-dom/server.edge";
 import {
   unstable_routeRSCServerRequest as routeRSCServerRequest,
   unstable_RSCStaticRouter as RSCStaticRouter,
 } from "react-router";
-import bootstrapScriptContent from "virtual:vite-rsc/bootstrap-script-content";
+// @ts-expect-error - no types for this yet
+import { createFromReadableStream } from "react-server-dom-parcel/client.edge";
 
-export async function prerender(
+export async function generateHTML(
   request: Request,
   fetchServer: (request: Request) => Promise<Response>,
+  bootstrapScriptContent: string | undefined,
 ): Promise<Response> {
   return await routeRSCServerRequest({
     // The incoming request.

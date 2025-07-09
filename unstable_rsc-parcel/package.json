@@ -3,7 +3,7 @@
   "targets": {
     "react-server": {
       "context": "react-server",
-      "source": "src/server.tsx",
+      "source": "src/entry.rsc.tsx",
       "scopeHoist": false,
       "includeNodeModules": {
         "@mjackson/node-fetch-server": false,
@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development parcel --no-autoinstall --no-cache",
     "build": "parcel build --no-autoinstall",
-    "start": "cross-env NODE_ENV=production node dist/server/server.js",
+    "start": "cross-env NODE_ENV=production node dist/server/entry.rsc.js",
     "typecheck": "tsc --noEmit"
   },
   "overrides": {
