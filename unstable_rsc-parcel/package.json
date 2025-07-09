@@ -18,7 +18,7 @@
     }
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development parcel --no-autoinstall",
+    "dev": "cross-env NODE_ENV=development parcel --no-autoinstall --no-cache",
     "build": "parcel build --no-autoinstall",
     "start": "cross-env NODE_ENV=production node dist/server/server.js",
     "typecheck": "tsc --noEmit"
