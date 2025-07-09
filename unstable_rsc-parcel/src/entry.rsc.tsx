@@ -14,7 +14,7 @@ import {
 
 // Import the generateHTML function from the client environment
 import { generateHTML } from "./entry.ssr" with { env: "react-client" };
-import { routes } from "./routes";
+import { routes } from "./routes/config";
 
 function fetchServer(request: Request) {
   return matchRSCServerRequest({
