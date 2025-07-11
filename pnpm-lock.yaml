@@ -622,6 +622,70 @@ importers:
         specifier: 0.2.0
         version: 0.2.0(vite@6.3.5(@types/node@24.0.4)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.2)(yaml@2.6.1))
 
+  unstable_rsc-vite-spa:
+    dependencies:
+      '@mjackson/node-fetch-server':
+        specifier: 0.7.0
+        version: 0.7.0
+      compression:
+        specifier: ^1.8.0
+        version: 1.8.0
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
+      react:
+        specifier: 19.1.0
+        version: 19.1.0
+      react-dom:
+        specifier: 19.1.0
+        version: 19.1.0(react@19.1.0)
+      react-router:
+        specifier: 0.0.0-nightly-c0a2a3bc9-20250709
+        version: 0.0.0-nightly-c0a2a3bc9-20250709(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    devDependencies:
+      '@tailwindcss/typography':
+        specifier: 0.5.16
+        version: 0.5.16(tailwindcss@4.1.11)
+      '@tailwindcss/vite':
+        specifier: ^4.1.10
+        version: 4.1.11(vite@6.3.5(@types/node@24.0.4)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.2)(yaml@2.6.1))
+      '@types/compression':
+        specifier: ^1.8.1
+        version: 1.8.1
+      '@types/express':
+        specifier: ^5.0.3
+        version: 5.0.3
+      '@types/node':
+        specifier: ^24.0.3
+        version: 24.0.4
+      '@types/react':
+        specifier: ^19.1.8
+        version: 19.1.8
+      '@types/react-dom':
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
+      '@vitejs/plugin-react':
+        specifier: ^4.5.2
+        version: 4.6.0(vite@6.3.5(@types/node@24.0.4)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.2)(yaml@2.6.1))
+      '@vitejs/plugin-rsc':
+        specifier: ^0.4.11
+        version: 0.4.11(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@24.0.4)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.2)(yaml@2.6.1))
+      tailwindcss:
+        specifier: ^4.1.10
+        version: 4.1.11
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+      vite:
+        specifier: ^6.3.5
+        version: 6.3.5(@types/node@24.0.4)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.2)(yaml@2.6.1)
+      vite-plugin-devtools-json:
+        specifier: 0.2.0
+        version: 0.2.0(vite@6.3.5(@types/node@24.0.4)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.2)(yaml@2.6.1))
+
   vercel:
     dependencies:
       '@react-router/node':

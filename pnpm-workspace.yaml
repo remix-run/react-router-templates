@@ -11,3 +11,4 @@ packages:
   - "vercel"
   - "unstable_rsc-parcel"
   - "unstable_rsc-vite"
+  - "unstable_rsc-vite-spa"
