@@ -4,7 +4,6 @@ import {
   unstable_routeRSCServerRequest as routeRSCServerRequest,
   unstable_RSCStaticRouter as RSCStaticRouter,
 } from "react-router";
-import bootstrapScriptContent from "virtual:vite-rsc/bootstrap-script-content";
 
 export async function generateHTML(
   request: Request,
@@ -22,6 +21,9 @@ export async function generateHTML(
       const payload = await getPayload();
       const formState =
         payload.type === "render" ? await payload.formState : undefined;
+
+      const bootstrapScriptContent =
+        await import.meta.viteRsc.loadBootstrapScriptContent("index");
 
       return await renderHTMLToReadableStream(
         <RSCStaticRouter getPayload={getPayload} />,
