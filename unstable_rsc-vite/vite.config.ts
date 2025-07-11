@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     rsc({
       entries: {
-        client: "src/entry.client.tsx",
+        client: "src/entry.browser.tsx",
         rsc: "src/entry.rsc.tsx",
         ssr: "src/entry.ssr.tsx",
       },
