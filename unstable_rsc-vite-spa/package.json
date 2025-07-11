@@ -8,7 +8,7 @@
     "typecheck": "tsc --noEmit"
   },
   "overrides": {
-    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709"
+    "react-router": "0.0.0-experimental-b3337fc38"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
@@ -17,7 +17,7 @@
     "express": "^5.1.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709"
+    "react-router": "0.0.0-experimental-b3337fc38"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.16",

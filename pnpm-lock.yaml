@@ -518,8 +518,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 0.0.0-nightly-c0a2a3bc9-20250709
-        version: 0.0.0-nightly-c0a2a3bc9-20250709(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.0-experimental-b3337fc38
+        version: 0.0.0-experimental-b3337fc38(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel:
         specifier: 19.1.0
         version: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -579,8 +579,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 0.0.0-nightly-c0a2a3bc9-20250709
-        version: 0.0.0-nightly-c0a2a3bc9-20250709(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.0-experimental-b3337fc38
+        version: 0.0.0-experimental-b3337fc38(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@tailwindcss/typography':
         specifier: 0.5.16
@@ -643,8 +643,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 0.0.0-nightly-c0a2a3bc9-20250709
-        version: 0.0.0-nightly-c0a2a3bc9-20250709(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.0-experimental-b3337fc38
+        version: 0.0.0-experimental-b3337fc38(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@tailwindcss/typography':
         specifier: 0.5.16
@@ -6812,8 +6812,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router@0.0.0-nightly-c0a2a3bc9-20250709:
-    resolution: {integrity: sha512-7cT9e0ulE8Az5pqNfd5BFkEOxtcXdUlZPDVsMPTZmrrUbrO30PIoBPQYy1p/0dpg2nXTPzBz7YfOfWbFXWUsvg==}
+  react-router@0.0.0-experimental-b3337fc38:
+    resolution: {integrity: sha512-iiD3cSXFav1qNdV7OLNxkinbMFhK3zUWTlDxh3QLk6J3o4evdRLWEZ6WW3GU75w1fNjIuN4bEAZHS+Ax4mN9iQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -14665,7 +14665,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router@0.0.0-nightly-c0a2a3bc9-20250709(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@0.0.0-experimental-b3337fc38(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
