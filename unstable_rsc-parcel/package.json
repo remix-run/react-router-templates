@@ -3,7 +3,7 @@
   "targets": {
     "react-server": {
       "context": "react-server",
-      "source": "src/server.tsx",
+      "source": "src/entry.rsc.tsx",
       "scopeHoist": false,
       "includeNodeModules": {
         "@mjackson/node-fetch-server": false,
@@ -18,15 +18,13 @@
     }
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development parcel --no-autoinstall",
+    "dev": "cross-env NODE_ENV=development parcel --no-autoinstall --no-cache",
     "build": "parcel build --no-autoinstall",
-    "start": "cross-env NODE_ENV=production node dist/server/server.js",
+    "start": "cross-env NODE_ENV=production node dist/server/entry.rsc.js",
     "typecheck": "tsc --noEmit"
   },
   "overrides": {
-    "react": "0.0.0-experimental-06e89951-20250620",
-    "react-dom": "0.0.0-experimental-06e89951-20250620",
-    "react-router": "0.0.0-experimental-14b5858e8"
+    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",
@@ -35,10 +33,10 @@
     "compression": "^1.8.0",
     "cross-env": "^7.0.3",
     "express": "^5.1.0",
-    "react": "0.0.0-experimental-06e89951-20250620",
-    "react-dom": "0.0.0-experimental-06e89951-20250620",
-    "react-router": "0.0.0-experimental-14b5858e8",
-    "react-server-dom-parcel": "0.0.0-experimental-06e89951-20250620"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-router": "0.0.0-nightly-c0a2a3bc9-20250709",
+    "react-server-dom-parcel": "19.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",

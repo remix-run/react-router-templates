@@ -1,5 +1,9 @@
-"use client-entry";
-
+import {
+  createFromReadableStream,
+  createTemporaryReferenceSet,
+  encodeReply,
+  setServerCallback,
+} from "@vitejs/plugin-rsc/browser";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import {
@@ -8,23 +12,18 @@ import {
   unstable_RSCHydratedRouter as RSCHydratedRouter,
   type unstable_RSCPayload as RSCServerPayload,
 } from "react-router";
-import {
-  createFromReadableStream,
-  encodeReply,
-  setServerCallback,
-  // @ts-expect-error - no types for this yet
-} from "react-server-dom-parcel/client";
 
 // Create and set the callServer function to support post-hydration server actions.
 setServerCallback(
   createCallServer({
     createFromReadableStream,
+    createTemporaryReferenceSet,
     encodeReply,
-  })
+  }),
 );
 
 // Get and decode the initial server payload
-createFromReadableStream(getRSCStream()).then((payload: RSCServerPayload) => {
+createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
   startTransition(async () => {
     const formState =
       payload.type === "render" ? await payload.formState : undefined;
@@ -40,7 +39,7 @@ createFromReadableStream(getRSCStream()).then((payload: RSCServerPayload) => {
       {
         // @ts-expect-error - no types for this yet
         formState,
-      }
+      },
     );
   });
 });

@@ -1,8 +1,5 @@
-import {
-  createFromReadableStream,
-  encodeReply,
-  setServerCallback,
-} from "@hiogawa/vite-rsc/browser";
+"use client-entry";
+
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import {
@@ -11,17 +8,25 @@ import {
   unstable_RSCHydratedRouter as RSCHydratedRouter,
   type unstable_RSCPayload as RSCServerPayload,
 } from "react-router";
+import {
+  createFromReadableStream,
+  createTemporaryReferenceSet,
+  encodeReply,
+  setServerCallback,
+  // @ts-expect-error - no types for this yet
+} from "react-server-dom-parcel/client";
 
 // Create and set the callServer function to support post-hydration server actions.
 setServerCallback(
   createCallServer({
     createFromReadableStream,
+    createTemporaryReferenceSet,
     encodeReply,
-  })
+  }),
 );
 
 // Get and decode the initial server payload
-createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
+createFromReadableStream(getRSCStream()).then((payload: RSCServerPayload) => {
   startTransition(async () => {
     const formState =
       payload.type === "render" ? await payload.formState : undefined;
@@ -37,7 +42,7 @@ createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
       {
         // @ts-expect-error - no types for this yet
         formState,
-      }
+      },
     );
   });
 });

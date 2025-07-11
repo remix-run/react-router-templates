@@ -1,4 +1,4 @@
-import rsc from "@hiogawa/vite-rsc/plugin";
+import rsc from "@vitejs/plugin-rsc/plugin";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
@@ -10,9 +10,9 @@ export default defineConfig({
     react(),
     rsc({
       entries: {
-        client: "src/browser.tsx",
-        rsc: "src/server.tsx",
-        ssr: "src/prerender.tsx",
+        client: "src/entry.client.tsx",
+        rsc: "src/entry.rsc.tsx",
+        ssr: "src/entry.ssr.tsx",
       },
     }),
     devtoolsJson(),

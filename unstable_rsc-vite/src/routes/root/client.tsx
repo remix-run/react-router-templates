@@ -10,7 +10,6 @@ import {
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const navigation = useNavigation();
-
   return (
     <html lang="en">
       <head>
@@ -47,7 +46,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </header>
-
         {children}
       </body>
     </html>

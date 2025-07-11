@@ -1,17 +1,19 @@
 import {
+  createTemporaryReferenceSet,
   decodeAction,
   decodeFormState,
   decodeReply,
   loadServerAction,
   renderToReadableStream,
-} from "@hiogawa/vite-rsc/rsc";
+} from "@vitejs/plugin-rsc/rsc";
 import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router";
 
-import { routes } from "./routes/routes";
+import { routes } from "./routes/config";
 
 function fetchServer(request: Request) {
   return matchRSCServerRequest({
     // Provide the React Server touchpoints.
+    createTemporaryReferenceSet,
     decodeAction,
     decodeFormState,
     decodeReply,
@@ -31,10 +33,10 @@ function fetchServer(request: Request) {
 }
 
 export default async function handler(request: Request) {
-  // Import the prerender function from the client envrionment
+  // Import the generateHTML function from the client environment
   const ssr = await import.meta.viteRsc.loadModule<
-    typeof import("./prerender")
+    typeof import("./entry.ssr")
   >("ssr", "index");
 
-  return ssr.prerender(request, fetchServer);
+  return ssr.generateHTML(request, fetchServer);
 }
