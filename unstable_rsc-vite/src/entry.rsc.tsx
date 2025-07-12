@@ -40,3 +40,7 @@ export default async function handler(request: Request) {
 
   return ssr.generateHTML(request, fetchServer);
 }
+
+if (import.meta.hot) {
+  import.meta.hot.accept();
+}
