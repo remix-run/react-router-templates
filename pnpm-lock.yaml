@@ -518,8 +518,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 7.7.0-pre.2
-        version: 7.7.0-pre.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 7.7.0
+        version: 7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel:
         specifier: 19.1.0
         version: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -579,8 +579,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 7.7.0-pre.2
-        version: 7.7.0-pre.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 7.7.0
+        version: 7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@tailwindcss/typography':
         specifier: 0.5.16
@@ -6758,8 +6758,8 @@ packages:
       react-dom:
         optional: true
 
-  react-router@7.7.0-pre.2:
-    resolution: {integrity: sha512-FUyamLrqK+iDLF8rKjAoUVrFyNNnNRtZyrR+Giklv/nAmNGT9xf+mVqOk1nd2b1aXEQYzbGzEMP0WslVtO/pWw==}
+  react-router@7.7.0:
+    resolution: {integrity: sha512-3FUYSwlvB/5wRJVTL/aavqHmfUKe0+Xm9MllkYgGo9eDwNdkvwlJGjpPxono1kCycLt6AnDTgjmXvK3/B4QGuw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -14610,7 +14610,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.1.0(react@19.1.0)
 
-  react-router@7.7.0-pre.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
