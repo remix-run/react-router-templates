@@ -497,7 +497,7 @@ importers:
         specifier: 0.7.0
         version: 0.7.0
       '@parcel/runtime-rsc':
-        specifier: ^2.15.2
+        specifier: ^2.15.4
         version: 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))
       buffer:
         specifier: ^6.0.3
@@ -518,8 +518,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 7.7.0-pre.0
-        version: 7.7.0-pre.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 7.7.0-pre.2
+        version: 7.7.0-pre.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel:
         specifier: 19.1.0
         version: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -546,7 +546,7 @@ importers:
         specifier: ^19.1.6
         version: 19.1.6(@types/react@19.1.8)
       parcel:
-        specifier: ^2.15.2
+        specifier: ^2.15.4
         version: 2.15.4(@swc/helpers@0.5.17)
       postcss:
         specifier: ^8.5.6
@@ -579,8 +579,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 7.7.0-pre.0
-        version: 7.7.0-pre.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 7.7.0-pre.2
+        version: 7.7.0-pre.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@tailwindcss/typography':
         specifier: 0.5.16
@@ -6758,8 +6758,8 @@ packages:
       react-dom:
         optional: true
 
-  react-router@7.7.0-pre.0:
-    resolution: {integrity: sha512-ob8by5PK6JtbLMkaXUr+4JF468RVxrsKJL4jAT0EAQLKLtOe0YscgxBCtXtFt22WRQRD7TfiUGT4EuUiT18zmg==}
+  react-router@7.7.0-pre.2:
+    resolution: {integrity: sha512-FUyamLrqK+iDLF8rKjAoUVrFyNNnNRtZyrR+Giklv/nAmNGT9xf+mVqOk1nd2b1aXEQYzbGzEMP0WslVtO/pWw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -14610,7 +14610,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.1.0(react@19.1.0)
 
-  react-router@7.7.0-pre.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@7.7.0-pre.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
