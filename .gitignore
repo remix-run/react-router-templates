@@ -3,3 +3,5 @@
 
 # https://github.com/netlify/cli/issues/6958
 .netlify
+# Parcel cache
+.parcel-cache

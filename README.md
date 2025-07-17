@@ -117,3 +117,5 @@ If you have a template you have developed and maintain, please submit a PR to ad
 - [React Router with Mantine](https://github.com/samui-build/react-router-mantine) - React Router 7 default template but with [Mantine](https://mantine.dev) instead of TailwindCSS.
 
 - [VITE-SHADCN](https://github.com/yluiop123/vite-shadcn) - a Shadcn Admin UI built with React Router 7 and Shadcn, Vite, React, Zustand.
+  
+- [React Router with Material UI](https://github.com/mui/material-ui/tree/master/examples/material-ui-react-router-ts) - React Router 7 with [Material UI 7](https://mui.com/material-ui/getting-started/).
