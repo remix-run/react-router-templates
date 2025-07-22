@@ -5,7 +5,9 @@
     "build": "vite build",
     "dev": "cross-env NODE_ENV=development vite",
     "start": "cross-env NODE_ENV=production node server.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "vc-init": "vercel",
+    "vc-release": "vercel --prod"
   },
   "dependencies": {
     "@mjackson/node-fetch-server": "0.7.0",

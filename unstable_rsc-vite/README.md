@@ -52,6 +52,20 @@ Run the production server:
 npm start
 ```
 
+# Deploy to Vercel
+
+Init vercel project
+
+```bash
+npm run vc
+```
+
+Release deployment
+
+```bash
+npm run vc-release
+```
+
 ## Understanding React Server Components
 
 This template includes three entry points:
