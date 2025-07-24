@@ -1,4 +1,4 @@
-import { createRequestListener } from "@mjackson/node-fetch-server";
+import { createRequestListener } from "@remix-run/node-fetch-server";
 import compression from "compression";
 import express from "express";
 
@@ -12,7 +12,7 @@ app.use(
   express.static("dist/client/assets", {
     immutable: true,
     maxAge: "1y",
-  })
+  }),
 );
 app.use(compression(), express.static("dist/client"));
 

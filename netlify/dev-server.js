@@ -1,4 +1,4 @@
-import { createRequestListener } from "@mjackson/node-fetch-server";
+import { createRequestListener } from "@remix-run/node-fetch-server";
 import express from "express";
 
 const PORT = Number.parseInt(process.env.PORT || "3000");
@@ -10,7 +10,7 @@ console.log("Starting development server");
 const viteDevServer = await import("vite").then((vite) =>
   vite.createServer({
     server: { middlewareMode: true },
-  })
+  }),
 );
 app.use(viteDevServer.middlewares);
 app.use(async (req, res, next) => {

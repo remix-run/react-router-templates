@@ -6,7 +6,7 @@
       "source": "src/entry.rsc.tsx",
       "scopeHoist": false,
       "includeNodeModules": {
-        "@mjackson/node-fetch-server": false,
+        "@remix-run/node-fetch-server": false,
         "compression": false,
         "express": false
       }
@@ -24,7 +24,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mjackson/node-fetch-server": "0.7.0",
+    "@remix-run/node-fetch-server": "0.8.0",
     "@parcel/runtime-rsc": "^2.15.4",
     "buffer": "^6.0.3",
     "compression": "^1.8.0",
