@@ -17,7 +17,9 @@ export const links = () => [
     crossOrigin: "anonymous",
   },
   {
-    rel: "stylesheet",
+    as: "style",
+    rel: "stylesheet preload prefetch",
+    crossOrigin: "anonymous",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
