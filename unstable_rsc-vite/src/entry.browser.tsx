@@ -11,6 +11,7 @@ import {
   unstable_getRSCStream as getRSCStream,
   unstable_RSCHydratedRouter as RSCHydratedRouter,
   type unstable_RSCPayload as RSCServerPayload,
+  type DataRouter,
 } from "react-router";
 
 // Create and set the callServer function to support post-hydration server actions.
@@ -43,3 +44,9 @@ createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
     );
   });
 });
+
+if (import.meta.hot) {
+  import.meta.hot.on("rsc:update", () => {
+    (window as unknown as { __router: DataRouter }).__router.revalidate();
+  });
+}
