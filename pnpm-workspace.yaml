@@ -9,5 +9,6 @@ packages:
   - "node-custom-server"
   - "node-postgres"
   - "vercel"
-  - "unstable_rsc-parcel"
-  - "unstable_rsc-vite"
+  - "unstable_rsc-data-mode-parcel"
+  - "unstable_rsc-data-mode-vite"
+  - "unstable_rsc-framework-mode"

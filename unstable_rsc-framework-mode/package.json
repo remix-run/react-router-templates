@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "build": "react-router build",
+    "start": "node server.js",
+    "typecheck": "react-router typegen && tsc"
+  },
+  "devDependencies": {
+    "@react-router/dev": "0.0.0-experimental-4cf5bd08c",
+    "@react-router/fs-routes": "0.0.0-experimental-4cf5bd08c",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.13.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-rsc": "0.4.26",
+    "cross-env": "^7.0.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3"
+  },
+  "dependencies": {
+    "@remix-run/node-fetch-server": "0.8.1",
+    "compression": "^1.8.0",
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "0.0.0-experimental-4cf5bd08c"
+  }
+}
