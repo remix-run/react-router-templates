@@ -9,10 +9,8 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     tsconfigPaths(),
-    // Experimental RSC plugins
     reactRouterRSC(),
     rsc(),
-    // Chrome DevTools support
     devtoolsJson(),
   ],
 });
