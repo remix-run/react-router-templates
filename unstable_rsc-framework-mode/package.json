@@ -18,7 +18,8 @@
     "tailwindcss": "4.1.13",
     "typescript": "5.9.2",
     "vite": "7.1.6",
-    "vite-plugin-devtools-json": "1.0.0"
+    "vite-plugin-devtools-json": "1.0.0",
+    "vite-tsconfig-paths": "5.1.4"
   },
   "dependencies": {
     "@react-router/serve": "0.0.0-experimental-4b4fa8f64",
