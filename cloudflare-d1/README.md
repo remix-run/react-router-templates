@@ -56,7 +56,7 @@ First, you need to create a d1 database in Cloudflare.
 npx wrangler d1 create <name-of-your-database>
 ```
 
-Be sure to update the `wrangler.toml` file with the correct database name and id.
+Be sure to update the `wrangler.jsonc` file with the correct database name and id.
 
 You will also need to [update the `drizzle.config.ts` file](https://orm.drizzle.team/docs/guides/d1-http-with-drizzle-kit), and then run the production migration:
 

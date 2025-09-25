@@ -1,4 +1,5 @@
 .DS_Store
+.env
 /node_modules/
 *.tsbuildinfo
 
@@ -9,3 +10,4 @@
 # Cloudflare
 .mf
 .wrangler
+worker-configuration.d.ts
