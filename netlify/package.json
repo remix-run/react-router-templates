@@ -9,25 +9,25 @@
   },
   "dependencies": {
     "@netlify/functions": "3.1.2",
-    "@react-router/node": "^7.7.1",
-    "isbot": "^5.1.27",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router": "^7.7.1"
+    "@react-router/node": "^7.9.2",
+    "isbot": "^5.1.31",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router": "^7.9.2"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.7.1",
-    "@remix-run/node-fetch-server": "0.8.0",
-    "@tailwindcss/vite": "^4.1.4",
-    "@types/express": "^5.0.1",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "cross-env": "^7.0.3",
+    "@react-router/dev": "^7.9.2",
+    "@remix-run/node-fetch-server": "0.9.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/express": "^5.0.3",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "cross-env": "^10.0.0",
     "express": "^5.1.0",
     "netlify-cli": "^20.1.1",
-    "tailwindcss": "^4.1.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.3",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
