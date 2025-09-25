@@ -5,3 +5,5 @@
 .netlify
 # Parcel cache
 .parcel-cache
+# Deno
+deno.lock
