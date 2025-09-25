@@ -32,9 +32,7 @@ test("build + start", async ({ page, $ }) => {
 
   await workflow({ page, url: localURL.href });
   const [, ...restLines] = start.buffer.stderr.split("\n");
-  expect(restLines.join("\n")).toBe(
-    `Listening on ${url} (${localURL})\n`,
-  );
+  expect(restLines.join("\n")).toBe(`Listening on ${url} (${localURL})\n`);
 });
 
 async function workflow({ page, url }: { page: Page; url: string }) {
