@@ -32,7 +32,7 @@ jobs:
           cache: "pnpm"
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v2.3.3
+          deno-version: v2.5.2
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
