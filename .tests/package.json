@@ -6,11 +6,11 @@
     "clean": "rm -rf ./test-results && rm -rf ./tmp"
   },
   "devDependencies": {
-    "@playwright/test": "^1.52.0",
+    "@playwright/test": "^1.55.1",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.15.3",
-    "execa": "^9.5.2",
-    "fs-extra": "^11.3.0",
+    "execa": "^9.6.0",
+    "fs-extra": "^11.3.2",
     "get-port": "^7.1.0",
     "pathe": "^2.0.3"
   }
