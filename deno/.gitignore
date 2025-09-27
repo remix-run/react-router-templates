@@ -3,5 +3,6 @@
 /node_modules/
 
 # React Router
+/.vite/
 /.react-router/
 /build/
