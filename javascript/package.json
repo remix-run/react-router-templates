@@ -1,10 +1,12 @@
 {
+  "name": "my-react-router-app",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "npm run preview"
   },
   "dependencies": {
     "@react-router/node": "^7.9.2",
@@ -12,12 +14,13 @@
     "isbot": "^5.1.31",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.9.2"
+    "react-router": "^7.9.2",
+    "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
     "@react-router/dev": "^7.9.2",
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
-    "vite": "^7.1.7"
+    "vite": "^6.0.0-beta.7"
   }
 }
