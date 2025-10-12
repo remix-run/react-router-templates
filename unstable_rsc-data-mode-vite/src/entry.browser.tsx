@@ -42,6 +42,12 @@ createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
         formState,
       },
     );
+
+    		// Expose router to window for HMR
+		if (payload.type === "render") {
+			// @ts-expect-error - router exists on render payload
+			(window as any).__router = payload.router;
+		}
   });
 });
 
