@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "start": "node server.js",
+    "typecheck": "react-router typegen && tsc -b"
+  },
+  "dependencies": {
+    "@react-router/express": "^7.9.2",
+    "@react-router/node": "^7.9.2",
+    "@vitejs/plugin-rsc": "^0.5.1",
+    "compression": "^1.8.1",
+    "express": "^5.1.0",
+    "isbot": "^5.1.31",
+    "mongoose": "^8.19.2",
+    "morgan": "^1.10.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router": "^7.9.2"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.9.2",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.3",
+    "@types/express-serve-static-core": "^5.0.7",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "cross-env": "^10.0.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
+}
