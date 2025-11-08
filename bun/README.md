@@ -72,10 +72,13 @@ Make sure to deploy the output of `bun run build`
 ```
 ├── package.json
 ├── bun.lock
+├── server.ts
 ├── build/
 │   ├── client/    # Static assets
 │   └── server/    # Server-side code
 ```
+
+Then, run `bun run server.ts build/server/index.js`
 
 ## Styling
 
