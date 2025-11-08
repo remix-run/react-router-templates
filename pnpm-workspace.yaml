@@ -1,5 +1,6 @@
 packages:
   - ".tests"
+  - "bun"
   - "default"
   - "javascript"
   - "minimal"
