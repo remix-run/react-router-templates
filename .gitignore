@@ -7,3 +7,5 @@
 .parcel-cache
 # Deno
 deno.lock
+# Bun
+bun.lock
