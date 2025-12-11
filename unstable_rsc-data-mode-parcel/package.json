@@ -30,10 +30,10 @@
     "compression": "^1.8.0",
     "cross-env": "^7.0.3",
     "express": "^5.1.0",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
     "react-router": "7.9.2",
-    "react-server-dom-parcel": "19.2.1"
+    "react-server-dom-parcel": "^19.2.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",
