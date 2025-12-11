@@ -10,7 +10,7 @@ import {
   unstable_createCallServer as createCallServer,
   unstable_getRSCStream as getRSCStream,
   unstable_RSCHydratedRouter as RSCHydratedRouter,
-  type unstable_RSCPayload as RSCPayload,
+  type unstable_RSCRenderPayload as RSCRenderPayload,
 } from "react-router/dom";
 
 setServerCallback(
@@ -21,10 +21,9 @@ setServerCallback(
   })
 );
 
-createFromReadableStream<RSCPayload>(getRSCStream()).then((payload) => {
+createFromReadableStream<RSCRenderPayload>(getRSCStream()).then((payload) => {
   startTransition(async () => {
-    const formState =
-      payload.type === "render" ? await payload.formState : undefined;
+    const formState = await payload.formState;
 
     hydrateRoot(
       document,
