@@ -21,7 +21,7 @@ app.get("/.well-known/appspecific/com.chrome.devtools.json", (_, res) => {
   res.end();
 });
 
-app.use(createRequestListener(build));
+app.use(createRequestListener(build.fetch));
 
 const PORT = Number.parseInt(process.env.PORT || "3000");
 app.listen(PORT, () => {
