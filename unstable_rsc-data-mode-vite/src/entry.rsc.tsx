@@ -6,10 +6,7 @@ import {
   loadServerAction,
   renderToReadableStream,
 } from "@vitejs/plugin-rsc/rsc";
-import {
-  RouterContextProvider,
-  unstable_matchRSCServerRequest as matchRSCServerRequest,
-} from "react-router";
+import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router";
 
 import { routes } from "./routes/config.ts";
 
