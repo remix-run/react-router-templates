@@ -5,6 +5,5 @@ packages:
   - "minimal"
   - "node-custom-server"
   - "node-postgres"
-  - "unstable_rsc-data-mode-parcel"
   - "unstable_rsc-data-mode-vite"
   - "unstable_rsc-framework-mode"

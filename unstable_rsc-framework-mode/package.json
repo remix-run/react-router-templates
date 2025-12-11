@@ -8,8 +8,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "devDependencies": {
-    "@react-router/dev": "7.10.1",
-    "@react-router/fs-routes": "7.10.1",
+    "@react-router/dev": "0.0.0-experimental-653010f49",
+    "@react-router/fs-routes": "0.0.0-experimental-653010f49",
     "@tailwindcss/vite": "4.1.13",
     "@types/node": "24.5.2",
     "@types/react": "^19.2.7",
@@ -22,10 +22,10 @@
     "vite-tsconfig-paths": "5.1.4"
   },
   "dependencies": {
-    "@react-router/serve": "7.10.1",
-    "@remix-run/node-fetch-server": "0.9.0",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
-    "react-router": "7.10.1"
+    "@react-router/serve": "0.0.0-experimental-653010f49",
+    "react": "canary",
+    "react-dom": "canary",
+    "react-router": "0.0.0-experimental-653010f49",
+    "react-server-dom-webpack": "canary"
   }
 }

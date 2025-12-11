@@ -6,9 +6,12 @@ import {
   loadServerAction,
   renderToReadableStream,
 } from "@vitejs/plugin-rsc/rsc";
-import { unstable_matchRSCServerRequest as matchRSCServerRequest } from "react-router";
+import {
+  RouterContextProvider,
+  unstable_matchRSCServerRequest as matchRSCServerRequest,
+} from "react-router";
 
-import { routes } from "./routes/config";
+import { routes } from "./routes/config.ts";
 
 function fetchServer(request: Request) {
   return matchRSCServerRequest({
@@ -32,14 +35,15 @@ function fetchServer(request: Request) {
   });
 }
 
-export default async function handler(request: Request) {
-  // Import the generateHTML function from the client environment
-  const ssr = await import.meta.viteRsc.loadModule<
-    typeof import("./entry.ssr")
-  >("ssr", "index");
+export default {
+  async fetch(request: Request) {
+    const ssr = await import.meta.viteRsc.loadModule<
+      typeof import("./entry.ssr.tsx")
+    >("ssr", "index");
 
-  return ssr.generateHTML(request, fetchServer);
-}
+    return await ssr.generateHTML(request, await fetchServer(request));
+  },
+};
 
 if (import.meta.hot) {
   import.meta.hot.accept();
