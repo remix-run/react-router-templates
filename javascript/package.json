@@ -7,15 +7,15 @@
     "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
-    "@react-router/node": "7.10.1",
-    "@react-router/serve": "7.10.1",
+    "@react-router/node": "7.12.0",
+    "@react-router/serve": "7.12.0",
     "isbot": "^5.1.31",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react-router": "7.10.1"
+    "react-router": "7.12.0"
   },
   "devDependencies": {
-    "@react-router/dev": "7.10.1",
+    "@react-router/dev": "7.12.0",
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
     "vite": "^7.1.7"
