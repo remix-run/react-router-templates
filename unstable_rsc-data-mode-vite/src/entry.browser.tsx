@@ -20,7 +20,7 @@ setServerCallback(
     createFromReadableStream,
     createTemporaryReferenceSet,
     encodeReply,
-  })
+  }),
 );
 
 // Get and decode the initial server payload
@@ -40,13 +40,15 @@ createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
       {
         // @ts-expect-error - no types for this yet
         formState,
-      }
+      },
     );
   });
 });
 
 if (import.meta.hot) {
   import.meta.hot.on("rsc:update", () => {
-    (window as unknown as { __router: DataRouter }).__router.revalidate();
+    (
+      window as unknown as { __reactRouterDataRouter: DataRouter }
+    ).__reactRouterDataRouter.revalidate();
   });
 }
