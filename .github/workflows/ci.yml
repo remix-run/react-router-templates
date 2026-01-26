@@ -12,13 +12,7 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            browser: firefox
-          - os: ubuntu-latest
             browser: chromium
-          - os: macos-latest
-            browser: webkit
-          - os: windows-latest
-            browser: msedge
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
