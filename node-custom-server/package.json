@@ -8,18 +8,18 @@
     "typecheck": "react-router typegen && tsc -b"
   },
   "dependencies": {
-    "@react-router/express": "7.12.0",
-    "@react-router/node": "7.12.0",
+    "@react-router/express": "7.13.1",
+    "@react-router/node": "7.13.1",
     "compression": "^1.8.1",
     "express": "^5.1.0",
     "isbot": "^5.1.31",
     "morgan": "^1.10.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router": "7.12.0"
+    "react-router": "7.13.1"
   },
   "devDependencies": {
-    "@react-router/dev": "7.12.0",
+    "@react-router/dev": "7.13.1",
     "@tailwindcss/vite": "^4.1.13",
     "@types/compression": "^1.8.1",
     "@types/express": "^5.0.3",
