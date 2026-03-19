@@ -67,3 +67,18 @@ Expected result:
 - template `package.json` files updated to one React Router version
 - `pnpm-lock.yaml` refreshed
 - `pnpm --dir .tests test` passes
+
+## 7. Report other outdated packages
+
+After the React Router bump is complete and tests pass, run:
+
+```sh
+pnpm outdated -r --format json
+```
+
+Reply with the remaining outdated packages grouped by update type:
+- major
+- minor
+- patch
+
+Then ask whether the user wants to update any of those packages next.
