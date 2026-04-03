@@ -15,7 +15,6 @@
     "types": ["vite/client", "@vitejs/plugin-rsc/types"],
     "jsx": "react-jsx",
     "rootDirs": [".", "./.react-router/types"],
-    "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
     }

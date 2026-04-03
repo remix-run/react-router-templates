@@ -10,9 +10,9 @@ import {
 
 const test = testTemplate("node-custom-server");
 
-// test("typecheck", async ({ $ }) => {
-//   await $(`pnpm typecheck`);
-// });
+test("typecheck", async ({ $ }) => {
+  await $(`pnpm typecheck`);
+});
 
 test("dev", async ({ page, $ }) => {
   const port = await getPort();
