@@ -14,8 +14,8 @@
     "express": "^5.2.1",
     "isbot": "^5.1.36",
     "morgan": "^1.10.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "react-router": "7.15.0"
   },
   "devDependencies": {
