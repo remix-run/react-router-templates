@@ -12,8 +12,17 @@ Run these commands from the repo root.
 ## 1. Confirm the current pins
 
 ```sh
-rg -n 'react-router|@react-router' --glob 'package.json' .
+rg -n '(@react-router/[^@\" ]+@|react-router@|"(?:react-router|@react-router/[^"]+)"\s*:)' . \
+  --glob '!**/node_modules/**' \
+  --glob '!pnpm-lock.yaml' \
+  --glob '!deno.lock'
 ```
+
+This repo has both Node and Deno templates. Do not limit the search to
+`package.json` files: the Deno template pins React Router packages in
+`deno/deno.jsonc`, including both task commands such as
+`deno run -A npm:@react-router/dev@x.y.z ...` and import-map entries such as
+`"react-router": "npm:react-router@x.y.z"`.
 
 ## 2. Resolve the latest published React Router versions
 
@@ -22,11 +31,17 @@ pnpm view react-router version
 pnpm view <currently-used-@react-router-package> version
 ```
 
-Run the second command once for each `@react-router/*` package currently used in the template `package.json` files from step 1. Use the shared latest version across that family when they match.
+Run the second command once for each `@react-router/*` package currently used
+in the template pins from step 1. Use the shared latest version across that
+family when they match.
 
 ## 3. Update the pinned versions in every affected template
 
-Update all matching `package.json` entries for `react-router` and every currently used `@react-router/*` dependency.
+Update all matching pins for `react-router` and every currently used
+`@react-router/*` dependency:
+
+- `package.json` entries in Node-based templates
+- `deno/deno.jsonc` task command pins and import-map entries
 
 Check the touched files with:
 
@@ -39,6 +54,15 @@ git diff --name-only
 ```sh
 pnpm install
 ```
+
+If `deno/deno.jsonc` changed, also refresh Deno's local install/lock metadata:
+
+```sh
+deno install
+```
+
+`deno/deno.lock` is intentionally untracked in this repo. Do not add it unless
+the repository starts tracking it separately.
 
 ## 5. Run the Playwright tests
 
@@ -64,8 +88,10 @@ git diff --stat
 ```
 
 Expected result:
-- template `package.json` files updated to one React Router version
+- template `package.json` files and `deno/deno.jsonc` updated to one React
+  Router version
 - `pnpm-lock.yaml` refreshed
+- `deno/deno.lock` not added unless it was already tracked
 - `pnpm --dir .tests test` passes
 
 ## 7. Report other outdated packages
