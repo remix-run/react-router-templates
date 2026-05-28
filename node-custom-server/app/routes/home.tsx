@@ -1,3 +1,5 @@
+import { valueFromExpressContext } from "~/context";
+
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 
@@ -9,7 +11,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_EXPRESS };
+  return { message: context.get(valueFromExpressContext) };
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
