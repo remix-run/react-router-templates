@@ -6,14 +6,12 @@ import logoLight from "./logo-light.svg";
 export function Welcome({
   guestBook,
   guestBookError,
-  message,
 }: {
   guestBook: {
     name: string;
     id: number;
   }[];
   guestBookError?: string;
-  message: string;
 }) {
   const navigation = useNavigation();
 
@@ -21,7 +19,6 @@ export function Welcome({
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <header className="flex flex-col items-center gap-9">
-          <h1 className="sr-only">{message}</h1>
           <div className="w-[500px] max-w-[100vw] p-4">
             <img
               src={logoLight}
@@ -97,7 +94,6 @@ export function Welcome({
               )}
             </Form>
             <ul className="text-center">
-              {<li className="p-3">{message}</li>}
               {guestBook.map(({ id, name }) => (
                 <li key={id} className="p-3">
                   {name}
