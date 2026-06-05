@@ -10,6 +10,11 @@ packages:
   - unstable_rsc-data-mode-vite
   - unstable_rsc-framework-mode
 
+allowBuilds:
+  esbuild: false
+  sharp: false
+  workerd: false
+
 minimumReleaseAge: 10800
 minimumReleaseAgeExclude:
   - react-router
