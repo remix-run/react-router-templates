@@ -36,36 +36,12 @@ A full-featured production-ready template with server-side rendering, TypeScript
 npx create-react-router@latest
 ```
 
-**Minimal template:**
-
-A lightweight template used for https://reactrouter.com/new. Designed for experimentation and demo applications. Not recommended for production use, but ideal for learning React Router's core concepts or creating reproductions.
-
-```bash
-npx create-react-router@latest --template remix-run/react-router-templates/minimal
-```
-
-**JavaScript only template:**
-
-A TypeScript-free version of the default template, offering the same production-ready features but without type checking. Great for teams preferring plain JavaScript.
-
-```bash
-npx create-react-router@latest --template remix-run/react-router-templates/javascript
-```
-
 **Node custom server template:**
 
 Extends the default template with a customizable Node.js server implementation, giving you full control over server configuration and middleware.
 
 ```bash
 npx create-react-router@latest --template remix-run/react-router-templates/node-custom-server
-```
-
-**Node PostgreSQL template:**
-
-Adds PostgreSQL database support with DrizzleORM to the default template, including database migrations and type-safe queries.
-
-```bash
-npx create-react-router@latest --template remix-run/react-router-templates/node-postgres
 ```
 
 ### Deployment Guides

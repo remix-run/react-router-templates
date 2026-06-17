@@ -152,9 +152,6 @@ export const urlRegex = {
   viteDev: urlMatch({ prefix: /Local:\s+/ }),
   reactRouterServe: urlMatch({ prefix: /\[react-router-serve\]\s+/ }),
   custom: urlMatch({ prefix: /Server is running on / }),
-  deno: urlMatch({ prefix: /Listening on / }),
-  netlify: urlMatch({ prefix: /◈ Server now ready on / }),
-  wrangler: urlMatch({ prefix: /Ready on / }),
 };
 
 // `vite.createServer` always tries to use the same HMR port
