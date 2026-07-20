@@ -29,7 +29,6 @@ export async function generateHTML(
         <RSCStaticRouter getPayload={getPayload} />,
         {
           bootstrapScriptContent,
-          // @ts-expect-error - no types for this yet
           formState,
         }
       );

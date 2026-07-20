@@ -38,7 +38,6 @@ createFromReadableStream<RSCServerPayload>(getRSCStream()).then((payload) => {
         />
       </StrictMode>,
       {
-        // @ts-expect-error - no types for this yet
         formState,
       },
     );
