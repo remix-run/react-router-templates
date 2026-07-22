@@ -8,7 +8,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "devDependencies": {
-    "@react-router/dev": "8.2.0",
+    "@react-router/dev": "^8",
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "24.5.2",
     "@types/react": "^19.2.14",
@@ -20,10 +20,10 @@
     "vite-plugin-devtools-json": "1.0.0"
   },
   "dependencies": {
-    "@react-router/serve": "8.2.0",
+    "@react-router/serve": "^8",
     "@remix-run/node-fetch-server": "0.13.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router": "8.2.0"
+    "react-router": "^8"
   }
 }
