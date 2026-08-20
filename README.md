@@ -72,3 +72,4 @@ If you have a template you have developed and maintain, please submit a PR to ad
 
 - [VITE-SHADCN](https://github.com/yluiop123/vite-shadcn) - a Shadcn Admin UI built with React Router 7 and Shadcn, Vite, React, Zustand.
 - [React Router with Material UI](https://github.com/mui/material-ui/tree/master/examples/material-ui-react-router-ts) - React Router 7 with [Material UI 7](https://mui.com/material-ui/getting-started/).
+- [oh-my-vibecode](https://github.com/craftowen/oh-my-vibecode) - React Router 8 on Cloudflare Workers with Better Auth on D1, Drizzle ORM, Tailwind v4, streaming SSR by default, and tests that run in the real Workers runtime.
