@@ -1,0 +1,20 @@
+# systemd unit for running without Docker.
+# Copy to /etc/systemd/system/convenience-store.service, then:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now convenience-store
+[Unit]
+Description=Convenience store web app
+After=network.target
+
+[Service]
+Type=simple
+User=store
+WorkingDirectory=/opt/convenience-store
+EnvironmentFile=/opt/convenience-store/.env
+Environment=NODE_ENV=production
+Environment=NODE_NO_WARNINGS=1
+ExecStart=/usr/bin/npm run start
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

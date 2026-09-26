@@ -1,0 +1,18 @@
+services:
+  store:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_PATH: /app/data/store.db
+    # Only listen on localhost; a reverse proxy (Caddy/nginx) handles the public side.
+    # Change to "3000:3000" to expose the app directly without a proxy.
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - store-data:/app/data
+
+volumes:
+  store-data:
