@@ -1,0 +1,5 @@
+# Replace with your domain. Caddy fetches and renews the HTTPS certificate automatically.
+store.example.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000
+}
