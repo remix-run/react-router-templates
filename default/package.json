@@ -11,16 +11,16 @@
     "@react-router/node": "*",
     "@react-router/serve": "*",
     "isbot": "^5.1.36",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-router": "*"
   },
   "devDependencies": {
     "@react-router/dev": "*",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^22",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.7",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
     "vite": "^8.0.3"
