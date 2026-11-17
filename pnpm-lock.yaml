@@ -34,26 +34,26 @@ importers:
     dependencies:
       '@react-router/node':
         specifier: '*'
-        version: 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+        version: 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       '@react-router/serve':
         specifier: '*'
-        version: 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+        version: 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       isbot:
         specifier: ^5.1.36
         version: 5.1.36
       react:
-        specifier: ^19.2.8
-        version: 19.2.8
+        specifier: ^19.3.1
+        version: 19.3.1
       react-dom:
-        specifier: ^19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: ^19.3.1
+        version: 19.3.1(react@19.3.1)
       react-router:
         specifier: '*'
-        version: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     devDependencies:
       '@react-router/dev':
         specifier: '*'
-        version: 8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)
+        version: 8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)
       '@tailwindcss/vite':
         specifier: ^4.2.2
         version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
@@ -61,11 +61,11 @@ importers:
         specifier: ^22
         version: 22.15.3
       '@types/react':
-        specifier: ^19.2.18
-        version: 19.2.18
+        specifier: ^19.3.0
+        version: 19.3.0
       '@types/react-dom':
-        specifier: ^19.2.7
-        version: 19.2.7(@types/react@19.2.18)
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       tailwindcss:
         specifier: ^4.2.2
         version: 4.2.2
@@ -80,10 +80,10 @@ importers:
     dependencies:
       '@react-router/express':
         specifier: '*'
-        version: 8.4.0(express@5.2.1)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+        version: 8.4.0(express@5.2.1)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       '@react-router/node':
         specifier: '*'
-        version: 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+        version: 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       compression:
         specifier: ^1.8.1
         version: 1.8.1
@@ -97,18 +97,18 @@ importers:
         specifier: ^1.10.1
         version: 1.10.1
       react:
-        specifier: ^19.2.8
-        version: 19.2.8
+        specifier: ^19.3.1
+        version: 19.3.1
       react-dom:
-        specifier: ^19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: ^19.3.1
+        version: 19.3.1(react@19.3.1)
       react-router:
         specifier: '*'
-        version: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     devDependencies:
       '@react-router/dev':
         specifier: '*'
-        version: 8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)
+        version: 8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)
       '@tailwindcss/vite':
         specifier: ^4.2.2
         version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
@@ -128,11 +128,11 @@ importers:
         specifier: ^22
         version: 22.15.3
       '@types/react':
-        specifier: ^19.2.18
-        version: 19.2.18
+        specifier: ^19.3.0
+        version: 19.3.0
       '@types/react-dom':
-        specifier: ^19.2.7
-        version: 19.2.7(@types/react@19.2.18)
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       cross-env:
         specifier: ^10.0.0
         version: 10.0.0
@@ -161,14 +161,14 @@ importers:
         specifier: ^5.2.1
         version: 5.2.1
       react:
-        specifier: ^19.2.8
-        version: 19.2.8
+        specifier: ^19.3.1
+        version: 19.3.1
       react-dom:
-        specifier: ^19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: ^19.3.1
+        version: 19.3.1(react@19.3.1)
       react-router:
         specifier: '*'
-        version: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     devDependencies:
       '@tailwindcss/typography':
         specifier: 0.5.20
@@ -186,17 +186,17 @@ importers:
         specifier: ^24.0.3
         version: 24.5.2
       '@types/react':
-        specifier: ^19.2.18
-        version: 19.2.18
+        specifier: ^19.3.0
+        version: 19.3.0
       '@types/react-dom':
-        specifier: ^19.2.7
-        version: 19.2.7(@types/react@19.2.18)
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
         specifier: ^6.0.1
         version: 6.0.1(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
       '@vitejs/plugin-rsc':
         specifier: ~0.5.34
-        version: 0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
+        version: 0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
       tailwindcss:
         specifier: ^4.2.2
         version: 4.2.2
@@ -214,23 +214,23 @@ importers:
     dependencies:
       '@react-router/serve':
         specifier: '*'
-        version: 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+        version: 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       '@remix-run/node-fetch-server':
         specifier: 0.13.0
         version: 0.13.0
       react:
-        specifier: ^19.2.8
-        version: 19.2.8
+        specifier: ^19.3.1
+        version: 19.3.1
       react-dom:
-        specifier: ^19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: ^19.3.1
+        version: 19.3.1(react@19.3.1)
       react-router:
         specifier: '*'
-        version: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     devDependencies:
       '@react-router/dev':
         specifier: '*'
-        version: 8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)
+        version: 8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)
       '@tailwindcss/vite':
         specifier: 4.2.2
         version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
@@ -238,14 +238,14 @@ importers:
         specifier: 24.5.2
         version: 24.5.2
       '@types/react':
-        specifier: ^19.2.18
-        version: 19.2.18
+        specifier: ^19.3.0
+        version: 19.3.0
       '@types/react-dom':
-        specifier: ^19.2.7
-        version: 19.2.7(@types/react@19.2.18)
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-rsc':
         specifier: ~0.5.34
-        version: 0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
+        version: 0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
       tailwindcss:
         specifier: 4.2.2
         version: 4.2.2
@@ -1074,13 +1074,13 @@ packages:
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
-  '@types/react-dom@19.2.7':
-    resolution: {integrity: sha512-I8bPpDLcHBv1qiIiXDCy71Rt8eQDKJP0sMSWJphDdAcdqiJ1sGpZamavoEIRZmYzjia9LuEb2HlYdDpmoENpvQ==}
+  '@types/react-dom@19.3.0':
+    resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
     peerDependencies:
-      '@types/react': ^19.2.0
+      '@types/react': ^19.3.0
 
-  '@types/react@19.2.18':
-    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
 
   '@types/send@1.2.1':
     resolution: {integrity: sha512-arsCikDvlU99zl1g69TcAB3mzZPpxgw0UQnaHeC1Nwb015xp8bknZv5rIfri9xTOcMuaVgvabfIRA7PSZVuZIQ==}
@@ -1768,10 +1768,10 @@ packages:
     resolution: {integrity: sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA==}
     engines: {node: '>= 0.10'}
 
-  react-dom@19.2.8:
-    resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
+  react-dom@19.3.1:
+    resolution: {integrity: sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==}
     peerDependencies:
-      react: ^19.2.8
+      react: ^19.3.1
 
   react-refresh@0.18.0:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
@@ -1787,8 +1787,8 @@ packages:
       react-dom:
         optional: true
 
-  react@19.2.8:
-    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
+  react@19.3.1:
+    resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
     engines: {node: '>=0.10.0'}
 
   readdirp@5.0.0:
@@ -1825,8 +1825,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  scheduler@0.27.0:
-    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+  scheduler@0.28.0:
+    resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -2508,14 +2508,14 @@ snapshots:
   '@poppinss/exception@1.2.3':
     optional: true
 
-  '@react-router/dev@8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)':
+  '@react-router/dev@8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/generator': 7.29.7
       '@babel/parser': 7.29.7
       '@babel/traverse': 7.29.7
       '@babel/types': 7.29.7
-      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       '@remix-run/node-fetch-server': 0.14.1
       babel-dead-code-elimination: 1.0.12
       chokidar: 5.0.0
@@ -2530,28 +2530,28 @@ snapshots:
       picocolors: 1.1.1
       pkg-types: 2.3.1
       react-refresh: 0.18.0
-      react-router: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react-router: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       semver: 7.8.5
       tinyglobby: 0.2.17
       valibot: 1.4.1(typescript@5.9.3)
       vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)
     optionalDependencies:
-      '@react-router/serve': 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
-      '@vitejs/plugin-rsc': 0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
+      '@react-router/serve': 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
+      '@vitejs/plugin-rsc': 0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
       typescript: 5.9.3
       wrangler: 4.75.0
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
 
-  '@react-router/dev@8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)':
+  '@react-router/dev@8.4.0(@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3))(@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)))(babel-plugin-macros@3.1.0)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))(wrangler@4.75.0)':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/generator': 7.29.7
       '@babel/parser': 7.29.7
       '@babel/traverse': 7.29.7
       '@babel/types': 7.29.7
-      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       '@remix-run/node-fetch-server': 0.14.1
       babel-dead-code-elimination: 1.0.12
       chokidar: 5.0.0
@@ -2566,44 +2566,44 @@ snapshots:
       picocolors: 1.1.1
       pkg-types: 2.3.1
       react-refresh: 0.18.0
-      react-router: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react-router: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       semver: 7.8.5
       tinyglobby: 0.2.17
       valibot: 1.4.1(typescript@5.9.3)
       vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)
     optionalDependencies:
-      '@react-router/serve': 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
-      '@vitejs/plugin-rsc': 0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
+      '@react-router/serve': 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
+      '@vitejs/plugin-rsc': 0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
       typescript: 5.9.3
       wrangler: 4.75.0
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
 
-  '@react-router/express@8.4.0(express@5.2.1)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)':
+  '@react-router/express@8.4.0(express@5.2.1)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)':
     dependencies:
-      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       express: 5.2.1
-      react-router: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react-router: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     optionalDependencies:
       typescript: 5.9.3
 
-  '@react-router/node@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)':
+  '@react-router/node@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)':
     dependencies:
       '@remix-run/node-fetch-server': 0.14.1
-      react-router: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react-router: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     optionalDependencies:
       typescript: 5.9.3
 
-  '@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)':
+  '@react-router/serve@8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)':
     dependencies:
-      '@react-router/express': 8.4.0(express@5.2.1)(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
-      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@5.9.3)
+      '@react-router/express': 8.4.0(express@5.2.1)(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
+      '@react-router/node': 8.4.0(react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@5.9.3)
       '@remix-run/node-fetch-server': 0.14.1
       compression: 1.8.1
       express: 5.2.1
       morgan: 1.10.1
-      react-router: 8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react-router: 8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       source-map-support: 0.5.21
     transitivePeerDependencies:
       - supports-color
@@ -2829,11 +2829,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.7(@types/react@19.2.18)':
+  '@types/react-dom@19.3.0(@types/react@19.3.0)':
     dependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
 
-  '@types/react@19.2.18':
+  '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
 
@@ -2851,14 +2851,14 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-rc.7
       vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1)
 
-  '@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))':
+  '@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       es-module-lexer: 2.3.2
       estree-walker: 3.0.3
       magic-string: 0.30.21
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
       srvx: 0.12.8
       strip-literal: 3.1.0
       turbo-stream: 3.2.1
@@ -2866,14 +2866,14 @@ snapshots:
       vitefu: 1.1.3(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@22.15.3)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))
     optional: true
 
-  '@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))':
+  '@vitejs/plugin-rsc@0.5.34(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.11.3)(@types/node@24.5.2)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.6.1))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       es-module-lexer: 2.3.2
       estree-walker: 3.0.3
       magic-string: 0.30.21
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
       srvx: 0.12.8
       strip-literal: 3.1.0
       turbo-stream: 3.2.1
@@ -3536,22 +3536,22 @@ snapshots:
       iconv-lite: 0.7.2
       unpipe: 1.0.0
 
-  react-dom@19.2.8(react@19.2.8):
+  react-dom@19.3.1(react@19.3.1):
     dependencies:
-      react: 19.2.8
-      scheduler: 0.27.0
+      react: 19.3.1
+      scheduler: 0.28.0
 
   react-refresh@0.18.0: {}
 
-  react-router@8.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-router@8.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@remix-run/route-pattern': 0.22.1
       cookie-es: 3.1.1
-      react: 19.2.8
+      react: 19.3.1
     optionalDependencies:
-      react-dom: 19.2.8(react@19.2.8)
+      react-dom: 19.3.1(react@19.3.1)
 
-  react@19.2.8: {}
+  react@19.3.1: {}
 
   readdirp@5.0.0: {}
 
@@ -3609,7 +3609,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  scheduler@0.27.0: {}
+  scheduler@0.28.0: {}
 
   semver@6.3.1: {}
 
